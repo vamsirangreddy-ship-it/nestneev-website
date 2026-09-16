@@ -1,0 +1,38 @@
+{
+  "slug": "residential-plot-sector-82",
+  "title": "Residential Plot in Sector 82",
+  "purpose": "buy",
+  "propertyType": "plot",
+  "bhk": null,
+  "price": 40000000,
+  "priceLabel": "₹4 Cr",
+  "rentPeriod": null,
+  "areaSqft": 2250,
+  "areaUnit": "sqyd",
+  "localitySlug": "sector-82",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": false,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "Clear-title residential plot (250 sq. yd.) in a licensed colony in Sector 82, New Gurugram, with wide approach road and all basic infrastructure in place.",
+  "amenities": [
+    "Wide Approach Road",
+    "Corner Plot",
+    "Gated Colony"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/exterior.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-08-05",
+  "specs": {
+    "bedrooms": null,
+    "bathrooms": null,
+    "balconies": null,
+    "floor": null,
+    "facing": "East",
+    "age": null
+  }
+}

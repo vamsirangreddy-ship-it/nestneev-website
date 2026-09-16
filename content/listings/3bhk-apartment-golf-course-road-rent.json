@@ -1,0 +1,51 @@
+{
+  "slug": "3bhk-apartment-golf-course-road-rent",
+  "title": "3 BHK Fully-Furnished Apartment for Rent on Golf Course Road",
+  "purpose": "rent",
+  "propertyType": "apartment",
+  "bhk": 3,
+  "price": 85000,
+  "priceLabel": "₹85,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 2100,
+  "areaUnit": "sqft",
+  "localitySlug": "golf-course-road",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "fully-furnished",
+  "featured": true,
+  "reraNumber": "",
+  "description": "Premium fully-furnished 3 BHK in a landmark high-rise on Golf Course Road, with skyline views, modular interiors, and access to a large clubhouse.",
+  "amenities": [
+    "Clubhouse",
+    "Swimming Pool",
+    "Gymnasium",
+    "Concierge",
+    "Covered Parking",
+    "Power Backup",
+    "24x7 Security"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/living-room.svg"
+    },
+    {
+      "src": "/images/listings/bedroom.svg"
+    },
+    {
+      "src": "/images/listings/balcony-view.svg"
+    },
+    {
+      "src": "/images/listings/bathroom.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-05",
+  "specs": {
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
+    "floor": "21 of 30",
+    "facing": "North-East",
+    "age": "3 years"
+  }
+}

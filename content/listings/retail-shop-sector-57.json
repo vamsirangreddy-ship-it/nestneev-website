@@ -1,0 +1,38 @@
+{
+  "slug": "retail-shop-sector-57",
+  "title": "Retail Shop for Rent in Sector 57",
+  "purpose": "rent",
+  "propertyType": "commercial",
+  "bhk": null,
+  "price": 120000,
+  "priceLabel": "₹1,20,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 900,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-57",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": false,
+  "reraNumber": "",
+  "description": "Ground-floor retail shop with high street frontage in Sector 57, suitable for F&B, retail, or showroom use. High footfall location along Golf Course Extension Road.",
+  "amenities": [
+    "High Street Frontage",
+    "Reserved Parking",
+    "Power Backup"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/exterior.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-12",
+  "specs": {
+    "bedrooms": null,
+    "bathrooms": 1,
+    "balconies": 0,
+    "floor": "Ground",
+    "facing": "East",
+    "age": "2 years"
+  }
+}

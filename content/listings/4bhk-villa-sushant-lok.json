@@ -1,0 +1,47 @@
+{
+  "slug": "4bhk-villa-sushant-lok",
+  "title": "4 BHK Independent Villa in Sushant Lok",
+  "purpose": "buy",
+  "propertyType": "villa",
+  "bhk": 4,
+  "price": 65000000,
+  "priceLabel": "₹6.5 Cr",
+  "rentPeriod": null,
+  "areaSqft": 3800,
+  "areaUnit": "sqft",
+  "localitySlug": "sushant-lok",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": true,
+  "reraNumber": "",
+  "description": "Spacious 4 BHK independent villa on a corner plot in Sushant Lok Phase 1, with a private garden, terrace, and dedicated staff quarters. Ideal for large families seeking a central location.",
+  "amenities": [
+    "Private Garden",
+    "Terrace",
+    "Servant Quarter",
+    "4 Car Parking",
+    "Modular Kitchen",
+    "Power Backup"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/exterior.svg"
+    },
+    {
+      "src": "/images/listings/living-room.svg"
+    },
+    {
+      "src": "/images/listings/bedroom.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-08-15",
+  "specs": {
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "balconies": 3,
+    "floor": "G+2",
+    "facing": "North",
+    "age": "5 years"
+  }
+}

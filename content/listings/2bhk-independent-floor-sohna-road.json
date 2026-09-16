@@ -1,0 +1,39 @@
+{
+  "slug": "2bhk-independent-floor-sohna-road",
+  "title": "2 BHK Independent Floor on Sohna Road",
+  "purpose": "buy",
+  "propertyType": "independent-house",
+  "bhk": 2,
+  "price": 9500000,
+  "priceLabel": "₹95 Lakh",
+  "rentPeriod": null,
+  "areaSqft": 1350,
+  "areaUnit": "sqft",
+  "localitySlug": "sohna-road",
+  "possessionStatus": "under-construction",
+  "furnishing": "unfurnished",
+  "featured": false,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "Second-floor independent unit in a low-rise builder floor on Sohna Road, with a private terrace and separate entrance. Expected possession in the coming months.",
+  "amenities": [
+    "Private Terrace",
+    "Separate Entrance",
+    "Stilt Parking",
+    "Power Backup"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/exterior.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-08-28",
+  "specs": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "balconies": 1,
+    "floor": "2 of 4",
+    "facing": "South",
+    "age": "Under construction"
+  }
+}

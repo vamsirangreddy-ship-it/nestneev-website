@@ -1,0 +1,51 @@
+{
+  "slug": "3bhk-apartment-dlf-phase-5",
+  "title": "3 BHK Apartment in DLF Phase 5",
+  "purpose": "buy",
+  "propertyType": "apartment",
+  "bhk": 3,
+  "price": 25000000,
+  "priceLabel": "₹2.5 Cr",
+  "rentPeriod": null,
+  "areaSqft": 1850,
+  "areaUnit": "sqft",
+  "localitySlug": "dlf-phase-5",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "semi-furnished",
+  "featured": true,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "A well-maintained 3 BHK apartment in a gated high-rise society in DLF Phase 5, close to Golf Course Road. Bright, cross-ventilated layout with a large living/dining area and two covered parking slots.",
+  "amenities": [
+    "Clubhouse",
+    "Swimming Pool",
+    "24x7 Security",
+    "Power Backup",
+    "Covered Parking",
+    "Children's Play Area",
+    "Gymnasium"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/living-room.svg"
+    },
+    {
+      "src": "/images/listings/bedroom.svg"
+    },
+    {
+      "src": "/images/listings/kitchen.svg"
+    },
+    {
+      "src": "/images/listings/balcony-view.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-08-20",
+  "specs": {
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
+    "floor": "12 of 24",
+    "facing": "East",
+    "age": "2 years"
+  }
+}

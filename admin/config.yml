@@ -1,0 +1,171 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded photos are stored in the repo, and the URL path they're
+# served from on the live site (the build script copies public/images/**
+# into the final site, so this must stay under public/images).
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+site_url: https://www.nestneev.com
+
+collections:
+  - name: "listings"
+    label: "Property Listings"
+    label_singular: "Listing"
+    folder: "content/listings"
+    create: true
+    delete: true
+    slug: "{{fields.slug}}"
+    format: "json"
+    identifier_field: title
+    summary: "{{title}} — {{priceLabel}} ({{purpose}})"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "e.g. 3 BHK Apartment in DLF Phase 5" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces, lowercase, e.g. 3bhk-apartment-dlf-phase-5. This becomes the page URL." }
+      - { label: "Buy or Rent", name: "purpose", widget: "select", options: [{ label: "Buy", value: "buy" }, { label: "Rent", value: "rent" }] }
+      - label: "Property Type"
+        name: "propertyType"
+        widget: "select"
+        options:
+          - { label: "Apartment", value: "apartment" }
+          - { label: "Villa", value: "villa" }
+          - { label: "Independent Floor / House", value: "independent-house" }
+          - { label: "Plot", value: "plot" }
+          - { label: "Commercial", value: "commercial" }
+      - { label: "BHK (leave blank for plots/commercial)", name: "bhk", widget: "number", value_type: "int", required: false }
+      - { label: "Price (plain number, e.g. 2500000)", name: "price", widget: "number" }
+      - { label: "Price Label (shown on site, e.g. ₹2.5 Cr or ₹35,000/month)", name: "priceLabel", widget: "string" }
+      - { label: "Rent Period (rentals only)", name: "rentPeriod", widget: "select", options: [{ label: "Per Month", value: "month" }], required: false }
+      - { label: "Area", name: "areaSqft", widget: "number" }
+      - { label: "Area Unit", name: "areaUnit", widget: "select", options: [{ label: "Sq. Ft.", value: "sqft" }, { label: "Sq. Yd.", value: "sqyd" }] }
+      - { label: "Locality", name: "localitySlug", widget: "relation", collection: "localities", search_fields: ["name"], value_field: "slug", display_fields: ["name"] }
+      - label: "Possession Status"
+        name: "possessionStatus"
+        widget: "select"
+        options:
+          - { label: "Ready to Move", value: "ready-to-move" }
+          - { label: "Under Construction", value: "under-construction" }
+      - label: "Furnishing"
+        name: "furnishing"
+        widget: "select"
+        options:
+          - { label: "Unfurnished", value: "unfurnished" }
+          - { label: "Semi-Furnished", value: "semi-furnished" }
+          - { label: "Fully-Furnished", value: "fully-furnished" }
+      - { label: "Show in Featured carousel on Homepage", name: "featured", widget: "boolean", default: false }
+      - { label: "RERA Registration Number (leave blank if not applicable)", name: "reraNumber", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Amenities", name: "amenities", widget: "list", hint: "Add one amenity per line" }
+      - { label: "Photos", name: "images", widget: "list", field: { label: "Photo", name: "src", widget: "image" } }
+      - { label: "Floor Plan Image (optional)", name: "floorPlanImage", widget: "image", required: false }
+      - { label: "Date Posted", name: "postedDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "Specifications"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Bedrooms", name: "bedrooms", widget: "number", required: false }
+          - { label: "Bathrooms", name: "bathrooms", widget: "number", required: false }
+          - { label: "Balconies", name: "balconies", widget: "number", required: false }
+          - { label: "Floor (e.g. 12 of 24)", name: "floor", widget: "string", required: false }
+          - { label: "Facing", name: "facing", widget: "string", required: false }
+          - { label: "Age of Property", name: "age", widget: "string", required: false }
+
+  - name: "localities"
+    label: "Localities"
+    label_singular: "Locality"
+    folder: "content/localities"
+    create: true
+    delete: true
+    slug: "{{fields.slug}}"
+    format: "json"
+    identifier_field: name
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces, lowercase, e.g. dlf-phase-5" }
+      - { label: "Region", name: "region", widget: "string", hint: "e.g. South Gurugram, New Gurugram, Central Gurugram" }
+      - { label: "Show in Popular Localities on Homepage", name: "featured", widget: "boolean", default: false }
+      - { label: "Short Description (1 line)", name: "shortDescription", widget: "string" }
+      - { label: "Long Description", name: "longDescription", widget: "text" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "content/blog"
+    create: true
+    delete: true
+    slug: "{{fields.slug}}"
+    format: "json"
+    identifier_field: title
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces, lowercase" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Excerpt (short summary)", name: "excerpt", widget: "string" }
+      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "text", hint: "Separate paragraphs with a blank line." }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - name: "testimonials"
+        label: "Client Testimonials"
+        file: "content/testimonials.json"
+        fields:
+          - { label: "Internal Note (not shown on site)", name: "note", widget: "string", required: false }
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Detail (e.g. what they bought/rented)", name: "detail", widget: "string" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "config"
+        label: "Business Details"
+        file: "content/config.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Live Domain (with https://)", name: "domain", widget: "string" }
+          - { label: "Homepage/Meta Description", name: "description", widget: "text" }
+          - { label: "City", name: "city", widget: "string" }
+          - { label: "State", name: "state", widget: "string" }
+          - { label: "Phone (display format)", name: "phoneDisplay", widget: "string" }
+          - { label: "Phone (dial format, e.g. +9198XXXXXXXX)", name: "phoneDial", widget: "string" }
+          - { label: "WhatsApp Number (country code + number, no + or spaces, e.g. 9198XXXXXXXX)", name: "whatsappNumber", widget: "string" }
+          - { label: "Enquiry Email", name: "email", widget: "string" }
+          - label: "Office Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Address Line 1", name: "line1", widget: "string" }
+              - { label: "Address Line 2", name: "line2", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "State", name: "state", widget: "string" }
+              - { label: "Pincode", name: "pincode", widget: "string" }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+          - { label: "RERA Disclaimer Text", name: "reraDisclaimerShort", widget: "text" }
+          - label: "Homepage Stats"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Properties Listed", name: "propertiesListed", widget: "string" }
+              - { label: "Happy Clients", name: "happyClients", widget: "string" }
+              - { label: "Localities Covered", name: "localitiesCovered", widget: "string" }
+              - { label: "Years in Gurugram", name: "yearsInGurugram", widget: "string" }
+          - { label: "Netlify Forms Enabled", name: "netlifyFormsEnabled", widget: "boolean", default: true }
+          - { label: "Google Maps Embed URL (default, used on Contact page)", name: "googleMapsEmbedDefault", widget: "string" }

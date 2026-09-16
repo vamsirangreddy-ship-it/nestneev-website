@@ -1,0 +1,46 @@
+{
+  "slug": "2bhk-apartment-sector-49-rent",
+  "title": "2 BHK Apartment for Rent in Sector 49",
+  "purpose": "rent",
+  "propertyType": "apartment",
+  "bhk": 2,
+  "price": 35000,
+  "priceLabel": "₹35,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 1200,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-49",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "semi-furnished",
+  "featured": true,
+  "reraNumber": "",
+  "description": "Semi-furnished 2 BHK apartment available for rent in a gated society in Sector 49, close to Sohna Road. Modular kitchen, wardrobes fitted, and one covered parking included.",
+  "amenities": [
+    "Clubhouse",
+    "Lift",
+    "24x7 Security",
+    "Covered Parking",
+    "Power Backup"
+  ],
+  "images": [
+    {
+      "src": "/images/listings/living-room.svg"
+    },
+    {
+      "src": "/images/listings/kitchen.svg"
+    },
+    {
+      "src": "/images/listings/bedroom.svg"
+    }
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-01",
+  "specs": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "balconies": 1,
+    "floor": "6 of 14",
+    "facing": "West",
+    "age": "4 years"
+  }
+}

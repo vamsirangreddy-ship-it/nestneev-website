@@ -1,0 +1,20 @@
+{
+  "note": "SAMPLE PLACEHOLDER CONTENT — replace every entry below with a real client review before launch. Do not publish fabricated reviews.",
+  "items": [
+    {
+      "quote": "[Sample placeholder — replace with a real client quote via the admin panel.]",
+      "name": "Sample Client (edit me)",
+      "detail": "Add a real name, e.g. \"Bought a 3BHK in DLF Phase 5\""
+    },
+    {
+      "quote": "[Sample placeholder — replace with a real client quote via the admin panel.]",
+      "name": "Sample Client (edit me)",
+      "detail": "Add a real name, e.g. \"Rented an apartment on Golf Course Road\""
+    },
+    {
+      "quote": "[Sample placeholder — replace with a real client quote via the admin panel.]",
+      "name": "Sample Client (edit me)",
+      "detail": "Add a real name, e.g. \"Sold a plot in Sector 82\""
+    }
+  ]
+}

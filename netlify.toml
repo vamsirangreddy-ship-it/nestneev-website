@@ -1,0 +1,15 @@
+[build]
+  command = "node scripts/build.js"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Pretty, extension-less URLs already come out of the build script
+# (every page is written as <path>/index.html), so no redirect rules
+# are needed for that. This just makes sure a truly unknown path still
+# gets a friendly page instead of Netlify's default 404.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

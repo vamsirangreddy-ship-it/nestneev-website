@@ -1,0 +1,14 @@
+{
+  "name": "nestneev-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "NestNeev — Gurugram real estate website. Static site generator, zero runtime dependencies.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "seed": "node scripts/seed-content.js",
+    "placeholders": "node scripts/gen-placeholders.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
