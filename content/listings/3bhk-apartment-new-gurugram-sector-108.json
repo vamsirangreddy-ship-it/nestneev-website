@@ -1,0 +1,51 @@
+{
+  "slug": "3bhk-apartment-new-gurugram-sector-108",
+  "title": "3 BHK Apartment for Sale in Sector 108 (New Gurugram)",
+  "purpose": "buy",
+  "propertyType": "apartment",
+  "bhk": 3,
+  "price": 9500000,
+  "priceLabel": "₹95 Lakh",
+  "rentPeriod": null,
+  "areaSqft": 1650,
+  "areaUnit": "sqft",
+  "localitySlug": "new-gurugram-sector-108",
+  "possessionStatus": "under-construction",
+  "furnishing": "unfurnished",
+  "featured": true,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "Under-construction 3 BHK in a new launch along the Dwarka Expressway corridor in Sector 108, offering larger layouts at a relatively accessible price point.",
+  "amenities": [
+    "Clubhouse (Planned)",
+    "Landscaped Podium",
+    "Reserved Parking",
+    "Construction-Linked Payment Plan"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-08-22",
+  "specs": {
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
+    "floor": "14 of 28",
+    "facing": "West",
+    "age": "Under construction"
+  },
+  "images": [
+    {
+      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/1.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/2.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/3.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/4.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/5.svg"
+    }
+  ]
+}

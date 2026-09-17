@@ -25,13 +25,19 @@
   ],
   "images": [
     {
-      "src": "/images/listings/exterior.svg"
+      "src": "/images/listings/4bhk-villa-sushant-lok/1.svg"
     },
     {
-      "src": "/images/listings/living-room.svg"
+      "src": "/images/listings/4bhk-villa-sushant-lok/2.svg"
     },
     {
-      "src": "/images/listings/bedroom.svg"
+      "src": "/images/listings/4bhk-villa-sushant-lok/3.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-villa-sushant-lok/4.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-villa-sushant-lok/5.svg"
     }
   ],
   "floorPlanImage": "",

@@ -508,3 +508,50 @@ ul { padding-left: 1.2em; }
 .mt-0 { margin-top: 0; }
 .mb-0 { margin-bottom: 0; }
 .text-center { text-align: center; }
+
+/* === batch-2 cosmetic polish === */
+.property-card { border-radius: var(--radius-lg); border-color: transparent; box-shadow: var(--shadow-sm), 0 0 0 1px var(--color-border); }
+.property-card:hover { box-shadow: var(--shadow-lg), 0 0 0 1px var(--color-border); transform: translateY(-4px); }
+.property-card__media { overflow: hidden; }
+.property-card__media img { transition: transform 0.35s ease; }
+.property-card:hover .property-card__media img { transform: scale(1.06); }
+.property-card__media::after {
+  content: "";
+  position: absolute; inset: auto 0 0 0; height: 55%;
+  background: linear-gradient(0deg, rgba(11,37,69,0.35), transparent);
+  pointer-events: none;
+}
+.property-card__price { letter-spacing: -0.01em; }
+
+.hero { padding-bottom: 7rem; }
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(255,255,255,0.06), transparent 35%),
+    radial-gradient(circle at 92% 75%, rgba(201,162,75,0.14), transparent 40%);
+  pointer-events: none;
+}
+.hero__stats { border-top: 1px solid rgba(255,255,255,0.14); padding-top: 1.5rem; }
+.hero__stat { position: relative; padding-right: 1.5rem; }
+.hero__stat:not(:last-child)::after {
+  content: ""; position: absolute; right: 0; top: 0.15em; bottom: 0.15em;
+  width: 1px; background: rgba(255,255,255,0.18);
+}
+
+.section__header .eyebrow { position: relative; padding-left: 1.15em; }
+.section__header .eyebrow::before {
+  content: ""; position: absolute; left: 0; top: 0.55em;
+  width: 0.8em; height: 2px; background: var(--color-gold);
+}
+
+.locality-card { transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.locality-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.locality-card img { transition: transform 0.35s ease; }
+.locality-card:hover img { transform: scale(1.05); }
+
+.btn--primary { box-shadow: 0 6px 16px rgba(201,162,75,0.35); }
+.btn--primary:hover { box-shadow: 0 8px 22px rgba(201,162,75,0.45); }
+
+.card, .blog-card, .testimonial-card { transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.card:hover, .blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }

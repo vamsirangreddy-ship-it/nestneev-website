@@ -26,16 +26,19 @@
   ],
   "images": [
     {
-      "src": "/images/listings/living-room.svg"
+      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/1.svg"
     },
     {
-      "src": "/images/listings/bedroom.svg"
+      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/2.svg"
     },
     {
-      "src": "/images/listings/balcony-view.svg"
+      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/3.svg"
     },
     {
-      "src": "/images/listings/bathroom.svg"
+      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/5.svg"
     }
   ],
   "floorPlanImage": "",

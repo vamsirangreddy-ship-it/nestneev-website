@@ -1,0 +1,51 @@
+{
+  "slug": "2bhk-apartment-sector-82-rent",
+  "title": "2 BHK Apartment for Rent in Sector 82",
+  "purpose": "rent",
+  "propertyType": "apartment",
+  "bhk": 2,
+  "price": 24000,
+  "priceLabel": "₹24,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 1100,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-82",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "semi-furnished",
+  "featured": false,
+  "reraNumber": "",
+  "description": "Semi-furnished 2 BHK in a gated society in Sector 82, New Gurugram, with a children's play area and landscaped common areas.",
+  "amenities": [
+    "Lift",
+    "24x7 Security",
+    "Children's Play Area",
+    "Covered Parking"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-13",
+  "specs": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "balconies": 1,
+    "floor": "7 of 15",
+    "facing": "East",
+    "age": "3 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/2bhk-apartment-sector-82-rent/1.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-82-rent/2.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-82-rent/3.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-82-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-82-rent/5.svg"
+    }
+  ]
+}

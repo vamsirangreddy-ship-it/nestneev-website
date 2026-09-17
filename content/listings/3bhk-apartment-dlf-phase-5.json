@@ -26,16 +26,19 @@
   ],
   "images": [
     {
-      "src": "/images/listings/living-room.svg"
+      "src": "/images/listings/3bhk-apartment-dlf-phase-5/1.svg"
     },
     {
-      "src": "/images/listings/bedroom.svg"
+      "src": "/images/listings/3bhk-apartment-dlf-phase-5/2.svg"
     },
     {
-      "src": "/images/listings/kitchen.svg"
+      "src": "/images/listings/3bhk-apartment-dlf-phase-5/3.svg"
     },
     {
-      "src": "/images/listings/balcony-view.svg"
+      "src": "/images/listings/3bhk-apartment-dlf-phase-5/4.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-dlf-phase-5/5.svg"
     }
   ],
   "floorPlanImage": "",

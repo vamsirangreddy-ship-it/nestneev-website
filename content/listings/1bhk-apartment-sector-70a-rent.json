@@ -1,0 +1,51 @@
+{
+  "slug": "1bhk-apartment-sector-70a-rent",
+  "title": "1 BHK Apartment for Rent in Sector 70A",
+  "purpose": "rent",
+  "propertyType": "apartment",
+  "bhk": 1,
+  "price": 16500,
+  "priceLabel": "₹16,500/month",
+  "rentPeriod": "month",
+  "areaSqft": 620,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-70a",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "fully-furnished",
+  "featured": false,
+  "reraNumber": "",
+  "description": "Fully furnished compact 1 BHK in a mid-rise society in Sector 70A, close to Sohna Road, ready to move in with modular kitchen and wardrobes.",
+  "amenities": [
+    "Fully Furnished",
+    "Lift",
+    "24x7 Security",
+    "Modular Kitchen"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-11",
+  "specs": {
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "balconies": 1,
+    "floor": "4 of 12",
+    "facing": "South-East",
+    "age": "2 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/1bhk-apartment-sector-70a-rent/1.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-sector-70a-rent/2.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-sector-70a-rent/3.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-sector-70a-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-sector-70a-rent/5.svg"
+    }
+  ]
+}

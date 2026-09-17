@@ -1,0 +1,53 @@
+{
+  "slug": "3bhk-apartment-sector-67-sale",
+  "title": "3 BHK Apartment for Sale in Sector 67",
+  "purpose": "buy",
+  "propertyType": "apartment",
+  "bhk": 3,
+  "price": 16500000,
+  "priceLabel": "₹1.65 Cr",
+  "rentPeriod": null,
+  "areaSqft": 1850,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-67",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": true,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "Spacious 3 BHK in a high-rise tower along the Golf Course Extension Road corridor in Sector 67, with clubhouse access and landscaped podium gardens.",
+  "amenities": [
+    "Clubhouse",
+    "Swimming Pool",
+    "Gymnasium",
+    "Lift",
+    "24x7 Security",
+    "Power Backup"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-05",
+  "specs": {
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
+    "floor": "11 of 22",
+    "facing": "East",
+    "age": "2 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/3bhk-apartment-sector-67-sale/1.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-sector-67-sale/2.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-sector-67-sale/3.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-sector-67-sale/4.svg"
+    },
+    {
+      "src": "/images/listings/3bhk-apartment-sector-67-sale/5.svg"
+    }
+  ]
+}

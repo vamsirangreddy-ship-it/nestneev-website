@@ -25,13 +25,19 @@
   ],
   "images": [
     {
-      "src": "/images/listings/exterior.svg"
+      "src": "/images/listings/4bhk-penthouse-golf-course-extension/1.svg"
     },
     {
-      "src": "/images/listings/living-room.svg"
+      "src": "/images/listings/4bhk-penthouse-golf-course-extension/2.svg"
     },
     {
-      "src": "/images/listings/balcony-view.svg"
+      "src": "/images/listings/4bhk-penthouse-golf-course-extension/3.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-penthouse-golf-course-extension/4.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-penthouse-golf-course-extension/5.svg"
     }
   ],
   "floorPlanImage": "",

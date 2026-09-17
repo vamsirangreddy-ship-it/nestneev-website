@@ -1,0 +1,51 @@
+{
+  "slug": "2bhk-apartment-palam-vihar-rent",
+  "title": "2 BHK Apartment for Rent in Palam Vihar",
+  "purpose": "rent",
+  "propertyType": "apartment",
+  "bhk": 2,
+  "price": 28000,
+  "priceLabel": "₹28,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 1050,
+  "areaUnit": "sqft",
+  "localitySlug": "palam-vihar",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": false,
+  "reraNumber": "",
+  "description": "Well-ventilated 2 BHK in a low-rise block in Palam Vihar's established residential layout, close to reputed schools and neighbourhood markets.",
+  "amenities": [
+    "Covered Parking",
+    "Power Backup",
+    "Near Schools",
+    "Park Facing"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-01",
+  "specs": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "balconies": 1,
+    "floor": "1 of 4",
+    "facing": "West",
+    "age": "10 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/1.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/2.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/3.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/5.svg"
+    }
+  ]
+}

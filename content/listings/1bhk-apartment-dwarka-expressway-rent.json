@@ -23,10 +23,19 @@
   ],
   "images": [
     {
-      "src": "/images/listings/living-room.svg"
+      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/1.svg"
     },
     {
-      "src": "/images/listings/kitchen.svg"
+      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/2.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/3.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/5.svg"
     }
   ],
   "floorPlanImage": "",

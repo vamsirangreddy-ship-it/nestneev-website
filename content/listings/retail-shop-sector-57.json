@@ -22,7 +22,13 @@
   ],
   "images": [
     {
-      "src": "/images/listings/exterior.svg"
+      "src": "/images/listings/retail-shop-sector-57/1.svg"
+    },
+    {
+      "src": "/images/listings/retail-shop-sector-57/2.svg"
+    },
+    {
+      "src": "/images/listings/retail-shop-sector-57/3.svg"
     }
   ],
   "floorPlanImage": "",

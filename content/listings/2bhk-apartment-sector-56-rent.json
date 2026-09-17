@@ -1,0 +1,52 @@
+{
+  "slug": "2bhk-apartment-sector-56-rent",
+  "title": "2 BHK Apartment for Rent in Sector 56",
+  "purpose": "rent",
+  "propertyType": "apartment",
+  "bhk": 2,
+  "price": 32000,
+  "priceLabel": "₹32,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 1150,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-56",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "semi-furnished",
+  "featured": true,
+  "reraNumber": "",
+  "description": "Bright 2 BHK apartment in a well-maintained society in Sector 56, a short drive from Golf Course Road and close to the Sector 55-56 Rapid Metro station.",
+  "amenities": [
+    "Lift",
+    "24x7 Security",
+    "Power Backup",
+    "Covered Parking",
+    "Park Facing"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-08",
+  "specs": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "balconies": 2,
+    "floor": "6 of 14",
+    "facing": "North-East",
+    "age": "4 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/2bhk-apartment-sector-56-rent/1.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-56-rent/2.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-56-rent/3.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-56-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-56-rent/5.svg"
+    }
+  ]
+}

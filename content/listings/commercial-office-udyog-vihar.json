@@ -1,0 +1,46 @@
+{
+  "slug": "commercial-office-udyog-vihar",
+  "title": "Office Space for Rent in Udyog Vihar",
+  "purpose": "rent",
+  "propertyType": "commercial",
+  "bhk": null,
+  "price": 150000,
+  "priceLabel": "₹1,50,000/month",
+  "rentPeriod": "month",
+  "areaSqft": 3000,
+  "areaUnit": "sqft",
+  "localitySlug": "udyog-vihar",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "semi-furnished",
+  "featured": false,
+  "reraNumber": "",
+  "description": "Fitted office floor in a commercial building in Udyog Vihar Phase 3, suitable for a mid-sized team, with dedicated cabins and an open workstation area already built out.",
+  "amenities": [
+    "Central AC",
+    "24x7 Security",
+    "Power Backup",
+    "Reserved Parking",
+    "Cafeteria in Building"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-06",
+  "specs": {
+    "bedrooms": null,
+    "bathrooms": 3,
+    "balconies": 0,
+    "floor": "3 of 6",
+    "facing": "North",
+    "age": "6 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/commercial-office-udyog-vihar/1.svg"
+    },
+    {
+      "src": "/images/listings/commercial-office-udyog-vihar/2.svg"
+    },
+    {
+      "src": "/images/listings/commercial-office-udyog-vihar/3.svg"
+    }
+  ]
+}

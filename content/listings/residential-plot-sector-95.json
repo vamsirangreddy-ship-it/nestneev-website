@@ -1,0 +1,41 @@
+{
+  "slug": "residential-plot-sector-95",
+  "title": "Residential Plot in Sector 95",
+  "purpose": "buy",
+  "propertyType": "plot",
+  "bhk": null,
+  "price": 11000000,
+  "priceLabel": "₹1.1 Cr",
+  "rentPeriod": null,
+  "areaSqft": 200,
+  "areaUnit": "sqyd",
+  "localitySlug": "sector-95",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": false,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "Clear-title 200 sq. yd. plot in a licensed plotted colony in Sector 95, New Gurugram — suited for buyers looking to build an independent house.",
+  "amenities": [
+    "Wide Approach Road",
+    "Gated Colony",
+    "Clear Title"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-08-18",
+  "specs": {
+    "bedrooms": null,
+    "bathrooms": null,
+    "balconies": null,
+    "floor": null,
+    "facing": "North-East",
+    "age": null
+  },
+  "images": [
+    {
+      "src": "/images/listings/residential-plot-sector-95/1.svg"
+    },
+    {
+      "src": "/images/listings/residential-plot-sector-95/2.svg"
+    }
+  ]
+}

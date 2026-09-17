@@ -24,7 +24,13 @@
   ],
   "images": [
     {
-      "src": "/images/listings/exterior.svg"
+      "src": "/images/listings/commercial-office-mg-road/1.svg"
+    },
+    {
+      "src": "/images/listings/commercial-office-mg-road/2.svg"
+    },
+    {
+      "src": "/images/listings/commercial-office-mg-road/3.svg"
     }
   ],
   "floorPlanImage": "",

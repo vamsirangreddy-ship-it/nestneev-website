@@ -24,13 +24,19 @@
   ],
   "images": [
     {
-      "src": "/images/listings/living-room.svg"
+      "src": "/images/listings/2bhk-apartment-sector-49-rent/1.svg"
     },
     {
-      "src": "/images/listings/kitchen.svg"
+      "src": "/images/listings/2bhk-apartment-sector-49-rent/2.svg"
     },
     {
-      "src": "/images/listings/bedroom.svg"
+      "src": "/images/listings/2bhk-apartment-sector-49-rent/3.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-49-rent/4.svg"
+    },
+    {
+      "src": "/images/listings/2bhk-apartment-sector-49-rent/5.svg"
     }
   ],
   "floorPlanImage": "",

@@ -1,0 +1,52 @@
+{
+  "slug": "4bhk-villa-sector-57-premium",
+  "title": "4 BHK Villa in Sector 57",
+  "purpose": "buy",
+  "propertyType": "villa",
+  "bhk": 4,
+  "price": 42000000,
+  "priceLabel": "₹4.2 Cr",
+  "rentPeriod": null,
+  "areaSqft": 3800,
+  "areaUnit": "sqft",
+  "localitySlug": "sector-57",
+  "possessionStatus": "ready-to-move",
+  "furnishing": "unfurnished",
+  "featured": true,
+  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
+  "description": "Corner-plot villa in a gated low-density villa community in Sector 57, with a private garden, servant quarters, and four-car covered parking.",
+  "amenities": [
+    "Private Garden",
+    "Servant Quarters",
+    "4-Car Parking",
+    "Gated Community",
+    "Power Backup"
+  ],
+  "floorPlanImage": "",
+  "postedDate": "2026-09-03",
+  "specs": {
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "balconies": 3,
+    "floor": "Ground + 1",
+    "facing": "North",
+    "age": "3 years"
+  },
+  "images": [
+    {
+      "src": "/images/listings/4bhk-villa-sector-57-premium/1.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-villa-sector-57-premium/2.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-villa-sector-57-premium/3.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-villa-sector-57-premium/4.svg"
+    },
+    {
+      "src": "/images/listings/4bhk-villa-sector-57-premium/5.svg"
+    }
+  ]
+}
