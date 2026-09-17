@@ -555,3 +555,16 @@ ul { padding-left: 1.2em; }
 
 .card, .blog-card, .testimonial-card { transition: box-shadow 0.2s ease, transform 0.2s ease; }
 .card:hover, .blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+/* === mobile filters reorder === */
+@media (max-width: 899px) {
+  .filters { order: 2; position: static; top: auto; margin-top: 0.5rem; }
+  .listing-results { order: 1; }
+}
+.filters-jump {
+  display: inline-flex; align-items: center; gap: 0.35em;
+  font-weight: 700; font-size: 0.85rem; color: var(--color-navy);
+  border: 1px solid var(--color-border); border-radius: var(--radius-sm);
+  padding: 0.45em 0.9em; background: var(--color-white);
+}
+@media (min-width: 900px) { .filters-jump { display: none; } }

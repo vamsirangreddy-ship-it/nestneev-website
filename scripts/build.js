@@ -324,7 +324,7 @@ function buildListingPage(purpose) {
   <section class="section">
     <div class="container">
       <div class="listing-layout">
-        <aside class="filters" data-filter-form-wrap>
+        <aside class="filters" id="property-filters" data-filter-form-wrap>
           <h3>Filter Properties</h3>
           <form data-filter-form>
             <div class="filters__group">
@@ -357,8 +357,9 @@ function buildListingPage(purpose) {
             <button type="reset" class="btn btn--outline btn--block btn--sm">Clear Filters</button>
           </form>
         </aside>
-        <div>
+        <div class="listing-results">
           <div class="listing-toolbar">
+            <a href="#property-filters" class="filters-jump">Filters &#9881;</a>
             <span class="results-count" data-results-count>${items.length} properties found</span>
             <select data-sort aria-label="Sort by">
               <option value="newest">Newest First</option>
