@@ -4,7 +4,7 @@ backend:
   branch: main
   # After deploying cms-auth-worker (see cms-auth-worker/README.md),
   # set this to that worker's *.workers.dev URL.
-  base_url: https://nestneev-cms-auth.REPLACE-WITH-YOUR-SUBDOMAIN.workers.dev
+  base_url: https://nestneev-cms-auth.nestneev.workers.dev
 
 # Where uploaded photos are stored in the repo, and the URL path they're
 # served from on the live site (the build script copies public/images/**
