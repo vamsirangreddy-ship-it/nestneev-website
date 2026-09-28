@@ -29,16 +29,10 @@
   "title": "1 BHK Apartment for Rent ",
   "images": [
     "/images/uploads/img-20251014-wa0074.jpg",
-    "/images/uploads/img-20251014-wa0074.jpg",
-    {
-      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/3.svg"
-    },
-    {
-      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/4.svg"
-    },
-    {
-      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/5.svg"
-    }
+    "/images/uploads/img-20251014-wa0076.jpg",
+    "/images/uploads/img-20251014-wa0077.jpg",
+    "/images/uploads/img-20251014-wa0078.jpg",
+    "/images/uploads/img-20251014-wa0077.jpg"
   ],
   "areaSqft": 650,
   "rentPeriod": "month",
