@@ -193,7 +193,7 @@ function enquiryForm({ formName, hiddenFields = {}, submitLabel = "Send Enquiry"
     .map(([k, v]) => `<input type="hidden" name="${k}" value="${T.escapeHtml(v)}">`)
     .join("\n");
   return `
-  <form class="enquiry-form" name="${formName}" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+  <form class="enquiry-form" name="${formName}" method="POST" action="/api/enquiry">
     <input type="hidden" name="form-name" value="${formName}">
     <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
     ${hidden}
@@ -562,7 +562,7 @@ function buildSellPage() {
         <span class="eyebrow">Post Your Property</span>
         <h2>Tell us about your property</h2>
       </div>
-      <form class="enquiry-form" name="sell-property" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/thank-you/">
+      <form class="enquiry-form" name="sell-property" method="POST" enctype="multipart/form-data" action="/api/enquiry">
         <input type="hidden" name="form-name" value="sell-property">
         <p class="visually-hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-grid form-grid--2">

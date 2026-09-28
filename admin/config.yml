@@ -1,3 +1,8 @@
+# Disabled: Decap tries to check a Netlify-style deploy-preview status
+# for every entry by default, which throws ("Failed to load preview")
+# now that there's no Netlify deploy behind this. Not needed anyway.
+show_preview_links: false
+
 backend:
   name: github
   repo: vamsirangreddy-ship-it/nestneev-website
