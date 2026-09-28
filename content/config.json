@@ -1,28 +1,28 @@
 {
   "domain": "https://www.nestneev.com",
-  "city": "Gurugram",
+  "city": "Gurgaon",
   "social": {
     "instagram": "https://instagram.com/nestneev",
-    "facebook": "https://facebook.com/nestneev",
+    "facebook": "https://www.facebook.com/profile.php?id=61577585993986",
     "linkedin": "https://linkedin.com/company/nestneev",
-    "youtube": ""
+    "youtube": "https://www.youtube.com/@Nestneev-m9d"
   },
-  "tagline": "Your Home, Your Ground.",
+  "tagline": "\"Strong foundations. Trusted guidance.\"",
   "state": "Haryana",
-  "siteName": "Nest Neev",
+  "siteName": "Nestneev",
   "phoneDisplay": "+91 9211859592",
   "address": {
-    "line1": "PLACEHOLDER - Office Address Line 1",
-    "line2": "PLACEHOLDER - Locality, Gurugram",
-    "city": "Gurugram",
+    "line1": "C72, Palam Vihar Kendra, Palam Vihar",
+    "line2": "Palam Vihar, Sector 23, 22, 21 & Dwarka Expressway",
+    "city": "Gurgaon",
     "state": "Haryana",
-    "pincode": "122001"
+    "pincode": "122017"
   },
   "googleMapsEmbedDefault": "https://www.google.com/maps?q=Gurugram,Haryana&output=embed",
   "whatsappNumber": "91 9211859592",
-  "email": "sales@nestneev.com",
-  "description": "NestNeev is a Gurugram-based real estate platform helping you Buy, Sell, and Rent residential and commercial properties across Gurugram, Haryana.",
-  "phoneDial": "+91 9211859592",
+  "email": "neevnest@gmail.com",
+  "description": "Nest Neev Real Estate helps you buy, sell, and rent homes in Gurgaon, Palam Vihar,  Sector 23, 22, 21 & Dwarka Expressway with local expertise and honest advice. Find the place you'll love to call home.",
+  "phoneDial": "+91 8130516080",
   "stats": {
     "propertiesListed": "450+",
     "happyClients": "600+",
@@ -30,5 +30,5 @@
     "yearsInGurugram": "5+"
   },
   "netlifyFormsEnabled": true,
-  "reraDisclaimerShort": "RERA registration numbers for individual projects are noted on each listing where available. Haryana RERA registration: PLACEHOLDER - HRERA-GGM-XXXX-XXXX."
+  "reraDisclaimerShort": "RERA registration numbers  HRERA-GGM-XXXX-XXXX."
 }
