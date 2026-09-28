@@ -1,14 +1,16 @@
 {
-  "siteName": "NestNeev",
-  "tagline": "Your Home, Your Ground.",
   "domain": "https://www.nestneev.com",
-  "description": "NestNeev is a Gurugram-based real estate platform helping you Buy, Sell, and Rent residential and commercial properties across Gurugram, Haryana.",
   "city": "Gurugram",
+  "social": {
+    "instagram": "https://instagram.com/nestneev",
+    "facebook": "https://facebook.com/nestneev",
+    "linkedin": "https://linkedin.com/company/nestneev",
+    "youtube": ""
+  },
+  "tagline": "Your Home, Your Ground.",
   "state": "Haryana",
-  "phoneDisplay": "+91 98XXX XXXXX",
-  "phoneDial": "+9198XXXXXXXX",
-  "whatsappNumber": "9198XXXXXXXX",
-  "email": "hello@nestneev.com",
+  "siteName": "Nest Neev",
+  "phoneDisplay": "+91 9211859592",
   "address": {
     "line1": "PLACEHOLDER - Office Address Line 1",
     "line2": "PLACEHOLDER - Locality, Gurugram",
@@ -16,13 +18,11 @@
     "state": "Haryana",
     "pincode": "122001"
   },
-  "social": {
-    "instagram": "https://instagram.com/nestneev",
-    "facebook": "https://facebook.com/nestneev",
-    "linkedin": "https://linkedin.com/company/nestneev",
-    "youtube": ""
-  },
-  "reraDisclaimerShort": "RERA registration numbers for individual projects are noted on each listing where available. Haryana RERA registration: PLACEHOLDER - HRERA-GGM-XXXX-XXXX.",
+  "googleMapsEmbedDefault": "https://www.google.com/maps?q=Gurugram,Haryana&output=embed",
+  "whatsappNumber": "91 9211859592",
+  "email": "sales@nestneev.com",
+  "description": "NestNeev is a Gurugram-based real estate platform helping you Buy, Sell, and Rent residential and commercial properties across Gurugram, Haryana.",
+  "phoneDial": "+91 9211859592",
   "stats": {
     "propertiesListed": "450+",
     "happyClients": "600+",
@@ -30,5 +30,5 @@
     "yearsInGurugram": "5+"
   },
   "netlifyFormsEnabled": true,
-  "googleMapsEmbedDefault": "https://www.google.com/maps?q=Gurugram,Haryana&output=embed"
+  "reraDisclaimerShort": "RERA registration numbers for individual projects are noted on each listing where available. Haryana RERA registration: PLACEHOLDER - HRERA-GGM-XXXX-XXXX."
 }
