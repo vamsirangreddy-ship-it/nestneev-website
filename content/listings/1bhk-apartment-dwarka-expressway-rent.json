@@ -26,14 +26,10 @@
     "facing": "West",
     "age": "1 year"
   },
-  "title": "1 BHK Apartment for Rent near Dwarka Expressway",
+  "title": "1 BHK Apartment for Rent ",
   "images": [
-    {
-      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/1.svg"
-    },
-    {
-      "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/2.svg"
-    },
+    "/images/uploads/img-20251014-wa0074.jpg",
+    "/images/uploads/img-20251014-wa0074.jpg",
     {
       "src": "/images/listings/1bhk-apartment-dwarka-expressway-rent/3.svg"
     },
