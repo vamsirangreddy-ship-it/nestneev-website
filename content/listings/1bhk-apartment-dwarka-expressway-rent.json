@@ -1,15 +1,15 @@
 {
-  "bhk": 1,
+  "bhk": 3,
   "floorPlanImage": "",
-  "price": 18000,
+  "price": 22500000,
   "reraNumber": "",
-  "slug": "1bhk-apartment-dwarka-expressway-rent",
-  "priceLabel": "₹18,000/month",
+  "slug": "3bhk-Builder-floor-palam-vihar-sale",
+  "priceLabel": "2.25cr",
   "postedDate": "2026-09-10",
   "featured": false,
   "localitySlug": "dwarka-expressway",
   "furnishing": "semi-furnished",
-  "propertyType": "apartment",
+  "propertyType": "independent-house",
   "areaUnit": "sqft",
   "possessionStatus": "ready-to-move",
   "amenities": [
@@ -26,7 +26,7 @@
     "facing": "West",
     "age": "1 year"
   },
-  "title": "1 BHK Apartment for Rent ",
+  "title": "3 BHK Builder Floor For Sale ",
   "images": [
     "/images/uploads/img-20251014-wa0074.jpg",
     "/images/uploads/img-20251014-wa0076.jpg",
@@ -35,7 +35,7 @@
     "/images/uploads/img-20251014-wa0077.jpg"
   ],
   "areaSqft": 650,
-  "rentPeriod": "month",
+  "rentPeriod": null,
   "description": "Compact and efficient 1 BHK in a new-age high-rise society near Dwarka Expressway, well suited for young professionals and couples.",
-  "purpose": "rent"
+  "purpose": "buy"
 }
