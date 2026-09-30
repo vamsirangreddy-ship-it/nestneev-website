@@ -151,7 +151,6 @@ function layout({ config, title, description, path, bodyClass, content, jsonLd, 
 <meta property="og:url" content="${canonical}">
 <meta property="og:image" content="${image}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
