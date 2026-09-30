@@ -446,8 +446,17 @@ ul { padding-left: 1.2em; }
 /* Property detail -----------------------------------------------------------*/
 .breadcrumbs { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 1rem; }
 .breadcrumbs a:hover { color: var(--color-navy); }
+/* Real client photos come in as standard 4:3 phone-camera shots. The old
+   fixed 340px height forced a much wider box on desktop, which cropped
+   away most of each photo (client-reported: photos looked over-zoomed
+   with the tops/bottoms cut off). Sizing by aspect-ratio instead keeps the
+   full photo visible at any screen width, and capping .gallery's width on
+   desktop keeps it from stretching into an oddly short strip on wide
+   monitors. */
+.gallery { max-width: 100%; }
+@media (min-width: 960px) { .gallery { max-width: 700px; } }
 .gallery__main { position: relative; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.6rem; }
-.gallery__main img { width: 100%; height: 340px; object-fit: cover; display: block; }
+.gallery__main img { width: 100%; aspect-ratio: 4 / 3; max-height: 520px; object-fit: cover; display: block; }
 .gallery__nav {
   position: absolute;
   top: 50%;
