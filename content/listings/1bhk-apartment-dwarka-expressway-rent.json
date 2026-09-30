@@ -1,15 +1,15 @@
 {
-  "bhk": 1,
-  "floorPlanImage": "",
-  "price": 18000,
+  "bhk": 3,
+  "floorPlanImage": "/images/uploads/whatsapp-image-2026-09-04-at-5.18.34-pm.jpeg",
+  "price": 22500000,
   "reraNumber": "",
-  "slug": "1bhk-apartment-dwarka-expressway-rent",
-  "priceLabel": "₹18,000/month",
-  "postedDate": "2026-09-10",
+  "slug": "3bhk-Builder-floor-palam-vihar-sale",
+  "priceLabel": "2.25cr",
+  "postedDate": "2026-09-28",
   "featured": false,
-  "localitySlug": "dwarka-expressway",
+  "localitySlug": "Palam-vihar-gurgaon",
   "furnishing": "semi-furnished",
-  "propertyType": "apartment",
+  "propertyType": "independent-house",
   "areaUnit": "sqft",
   "possessionStatus": "ready-to-move",
   "amenities": [
@@ -19,23 +19,23 @@
     "Visitor Parking"
   ],
   "specs": {
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "balconies": 1,
-    "floor": "9 of 19",
-    "facing": "West",
-    "age": "1 year"
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
+    "floor": "1 of 4",
+    "facing": "East",
+    "age": "New"
   },
-  "title": "1 BHK Apartment for Rent ",
+  "title": "3 BHK Builder Floor For Sale ",
   "images": [
-    "/images/uploads/img-20251014-wa0074.jpg",
-    "/images/uploads/img-20251014-wa0076.jpg",
-    "/images/uploads/img-20251014-wa0077.jpg",
-    "/images/uploads/img-20251014-wa0078.jpg",
-    "/images/uploads/img-20251014-wa0077.jpg"
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.36-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.30-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.33-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.31-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.34-pm.jpeg"
   ],
-  "areaSqft": 650,
-  "rentPeriod": "month",
-  "description": "Compact and efficient 1 BHK in a new-age high-rise society near Dwarka Expressway, well suited for young professionals and couples.",
-  "purpose": "rent"
+  "areaSqft": 2430,
+  "rentPeriod": null,
+  "description": "Experience premium living in this luxurious 3 BHK builder floor, designed with modern architecture, elegant interiors, and high-quality construction.\n\nProperty Highlights:\n\n🏡 Spacious 3 BHK Layout\n✨ Luxury & Modern Interiors\n🛋️ Premium Finishing & Fixtures\n🛗 Lift Facility\n🚗 Dedicated Car Parking\n🌳 Peaceful & Well-Connected Location\n🔒 Secure Residential Environment\n🏠 Ready-to-Move-In Option\n📍 Excellent Location with Easy Access to Schools, Markets, Hospitals & Main Roads",
+  "purpose": "buy"
 }
