@@ -20,11 +20,15 @@ function escapeHtml(str) {
 
 function waLink(config, presetMessage) {
   const msg = encodeURIComponent(presetMessage || `Hi NestNeev, I'd like more information.`);
-  return `https://wa.me/${config.whatsappNumber}?text=${msg}`;
+  // wa.me requires digits only (country code + number, no spaces/+/dashes) or it 404s.
+  const number = String(config.whatsappNumber || "").replace(/[^\d]/g, "");
+  return `https://wa.me/${number}?text=${msg}`;
 }
 
 function telLink(config) {
-  return `tel:${config.phoneDial}`;
+  // tel: links are unreliable with stray spaces on some devices/browsers.
+  const number = String(config.phoneDial || "").replace(/[^\d+]/g, "");
+  return `tel:${number}`;
 }
 
 function paragraphs(text) {
@@ -48,7 +52,7 @@ function siteHeader(config, activePath) {
   return `
   <header class="site-header">
     <div class="container nav">
-      <a href="/" class="nav__logo"><img src="/images/logo.svg" alt="${escapeHtml(config.siteName)}" width="160" height="32"></a>
+      <a href="/" class="nav__logo"><img src="/images/logo-badge.png" alt="${escapeHtml(config.siteName)}" width="52" height="49"></a>
       <nav class="nav__links" aria-label="Primary">
         ${links}
       </nav>
@@ -82,7 +86,7 @@ function siteFooter(config) {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/images/logo-white.svg" alt="${escapeHtml(config.siteName)}" width="150" height="30">
+          <span class="footer-brand__logo"><img src="/images/logo-badge.png" alt="${escapeHtml(config.siteName)}" width="84" height="79"></span>
           <p>${escapeHtml(config.description)}</p>
           <div class="footer-social">${socialLinks}</div>
         </div>
@@ -148,6 +152,9 @@ function layout({ config, title, description, path, bodyClass, content, jsonLd, 
 <meta property="og:image" content="${image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/styles.css">
 ${ld}
 </head>
@@ -161,17 +168,32 @@ ${siteFooter(config)}
 }
 
 function propertyCard(listing, locality, config) {
-  const img = (listing.images && listing.images[0] && listing.images[0].src) || "/images/listings/exterior.svg";
+  const imgs = listing.images && listing.images.length ? listing.images.map((i) => i.src) : ["/images/listings/exterior.svg"];
+  const hasGallery = imgs.length > 1;
+  const detailHref = `/property/${listing.slug}/`;
   const purposeBadge = listing.purpose === "buy" ? `<span class="badge badge--buy">For Sale</span>` : `<span class="badge badge--rent">For Rent</span>`;
   const areaUnit = listing.areaUnit === "sqyd" ? "sq. yd." : "sq. ft.";
   const bhkText = listing.bhk ? `${listing.bhk} BHK` : humanizePropertyType(listing.propertyType);
   const enquiryMsg = `Hi NestNeev, I'm interested in "${listing.title}" (${config.domain}/property/${listing.slug}/).`;
+  const slides = imgs
+    .map(
+      (src, i) => `<a href="${detailHref}" class="property-card__slide" data-slide>
+      <img src="${src}" alt="${escapeHtml(listing.title)}${imgs.length > 1 ? ` — photo ${i + 1} of ${imgs.length}` : ""}" loading="lazy"></a>`
+    )
+    .join("");
+  const nav = hasGallery
+    ? `
+      <button type="button" class="property-card__nav property-card__nav--prev" data-nav="prev" aria-label="Previous photo">&#8249;</button>
+      <button type="button" class="property-card__nav property-card__nav--next" data-nav="next" aria-label="Next photo">&#8250;</button>
+      <div class="property-card__dots" data-dots>${imgs.map((_, i) => `<span class="property-card__dot${i === 0 ? " is-active" : ""}"></span>`).join("")}</div>`
+    : "";
   return `
   <article class="property-card" data-locality="${listing.localitySlug}" data-type="${listing.propertyType}" data-bhk="${listing.bhk || ""}" data-price="${listing.price}" data-area="${listing.areaSqft}" data-possession="${listing.possessionStatus}" data-furnishing="${listing.furnishing}" data-posted="${listing.postedDate}">
-    <a href="/property/${listing.slug}/" class="property-card__media">
-      <img src="${img}" alt="${escapeHtml(listing.title)}" loading="lazy">
+    <div class="property-card__media${hasGallery ? " has-gallery" : ""}">
+      <div class="property-card__gallery" data-gallery>${slides}</div>
       <div class="property-card__badges">${purposeBadge}${listing.featured ? '<span class="badge badge--gold">Featured</span>' : ""}</div>
-    </a>
+      ${nav}
+    </div>
     <div class="property-card__body">
       <div class="property-card__price">${escapeHtml(listing.priceLabel)}</div>
       <a href="/property/${listing.slug}/"><h3 class="property-card__title">${escapeHtml(listing.title)}</h3></a>

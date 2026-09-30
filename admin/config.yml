@@ -68,8 +68,8 @@ collections:
       - { label: "RERA Registration Number (leave blank if not applicable)", name: "reraNumber", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Amenities", name: "amenities", widget: "list", hint: "Add one amenity per line" }
-      - { label: "Photos", name: "images", widget: "list", field: { label: "Photo", name: "src", widget: "image" } }
-      - { label: "Floor Plan Image (optional)", name: "floorPlanImage", widget: "image", required: false }
+      - { label: "Photos", name: "images", widget: "list", field: { label: "Photo", name: "src", widget: "image", allow_multiple: false } }
+      - { label: "Floor Plan Image (optional)", name: "floorPlanImage", widget: "image", required: false, allow_multiple: false }
       - { label: "Date Posted", name: "postedDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - label: "Specifications"
         name: "specs"
@@ -98,7 +98,7 @@ collections:
       - { label: "Show in Popular Localities on Homepage", name: "featured", widget: "boolean", default: false }
       - { label: "Short Description (1 line)", name: "shortDescription", widget: "string" }
       - { label: "Long Description", name: "longDescription", widget: "text" }
-      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Cover Image", name: "image", widget: "image", allow_multiple: false }
 
   - name: "blog"
     label: "Blog Posts"
@@ -114,7 +114,7 @@ collections:
       - { label: "URL Slug", name: "slug", widget: "string", hint: "No spaces, lowercase" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - { label: "Excerpt (short summary)", name: "excerpt", widget: "string" }
-      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - { label: "Cover Image", name: "coverImage", widget: "image", allow_multiple: false }
       - { label: "Body", name: "body", widget: "text", hint: "Separate paragraphs with a blank line." }
 
   - name: "testimonials"
