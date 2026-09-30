@@ -390,7 +390,8 @@ function buildListingPage(purpose) {
 function buildPropertyPages() {
   listings.forEach((listing) => {
     const locality = localityBySlug[listing.localitySlug];
-    const images = listing.images && listing.images.length ? listing.images.map((i) => i.src) : ["/images/listings/exterior.svg"];
+    const images = listing.images && listing.images.length ? listing.images.map(T.imageSrc).filter(Boolean) : [];
+    if (!images.length) images.push("/images/listings/exterior.svg");
     const areaUnit = listing.areaUnit === "sqyd" ? "sq. yd." : "sq. ft.";
     const purposeLabel = listing.purpose === "buy" ? "Buy" : "Rent";
 

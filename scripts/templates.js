@@ -167,8 +167,18 @@ ${siteFooter(config)}
 </html>`;
 }
 
+// Decap's list widget with a single `field:` (not `fields:`) saves a FLAT
+// array of plain values (e.g. ["/images/uploads/a.jpg", ...]), not objects
+// like [{src: "..."}]. Some older/seeded listings still use the object
+// shape though, so accept either to avoid broken <img> tags either way.
+function imageSrc(item) {
+  if (typeof item === "string") return item;
+  return (item && item.src) || "";
+}
+
 function propertyCard(listing, locality, config) {
-  const imgs = listing.images && listing.images.length ? listing.images.map((i) => i.src) : ["/images/listings/exterior.svg"];
+  const imgs = listing.images && listing.images.length ? listing.images.map(imageSrc).filter(Boolean) : [];
+  if (!imgs.length) imgs.push("/images/listings/exterior.svg");
   const hasGallery = imgs.length > 1;
   const detailHref = `/property/${listing.slug}/`;
   const purposeBadge = listing.purpose === "buy" ? `<span class="badge badge--buy">For Sale</span>` : `<span class="badge badge--rent">For Rent</span>`;
@@ -252,6 +262,7 @@ function breadcrumbs(items) {
 module.exports = {
   NAV_ITEMS,
   escapeHtml,
+  imageSrc,
   waLink,
   telLink,
   paragraphs,
