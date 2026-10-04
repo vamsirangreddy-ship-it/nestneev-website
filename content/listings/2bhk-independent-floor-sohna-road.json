@@ -1,51 +1,40 @@
 {
-  "slug": "2bhk-independent-floor-sohna-road",
-  "title": "2 BHK Independent Floor on Sohna Road",
-  "purpose": "buy",
+  "bhk": 3,
+  "floorPlanImage": "",
+  "price": 26500000,
+  "reraNumber": "",
+  "slug": "3-bhk-builder-floor-for-sale-palam-vihar",
+  "priceLabel": "2.65",
+  "postedDate": "2026-08-28",
+  "featured": true,
+  "localitySlug": "Palam-vihar-gurgaon",
+  "furnishing": "semi-furnished",
   "propertyType": "independent-house",
-  "bhk": 2,
-  "price": 9500000,
-  "priceLabel": "₹95 Lakh",
-  "rentPeriod": null,
-  "areaSqft": 1350,
-  "areaUnit": "sqft",
-  "localitySlug": "sohna-road",
-  "possessionStatus": "under-construction",
-  "furnishing": "unfurnished",
-  "featured": false,
-  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
-  "description": "Second-floor independent unit in a low-rise builder floor on Sohna Road, with a private terrace and separate entrance. Expected possession in the coming months.",
+  "areaUnit": "sqyd",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Private Terrace",
     "Separate Entrance",
-    "Stilt Parking",
-    "Power Backup"
+    "Stilt Parking"
   ],
-  "images": [
-    {
-      "src": "/images/listings/2bhk-independent-floor-sohna-road/1.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-independent-floor-sohna-road/2.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-independent-floor-sohna-road/3.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-independent-floor-sohna-road/4.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-independent-floor-sohna-road/5.svg"
-    }
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-08-28",
   "specs": {
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "balconies": 1,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
     "floor": "2 of 4",
-    "facing": "South",
-    "age": "Under construction"
-  }
+    "facing": "North",
+    "age": "New Builder Floor "
+  },
+  "title": "3 BHK Builder Floor for sale Palam Vihar",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.29-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.34-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.30-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.36-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-04-at-5.18.35-pm-1-.jpeg"
+  ],
+  "areaSqft": 270,
+  "rentPeriod": null,
+  "description": "Discover modern luxury and comfortable living with this beautifully designed 3 BHK Luxury Builder Floor, ideal for families looking for a premium home in a prime residential location.\n\nThis thoughtfully planned builder floor offers spacious bedrooms, elegant interiors, a modern modular kitchen, well-designed bathrooms, ample natural light and ventilation, and quality finishes throughout. The property combines contemporary architecture with practical living spaces, making it an excellent choice for both end-users and investors.\n\nProperty Highlights:\n\nPremium 3 BHK Builder Floor\nSpacious and well-designed layout\nModern interiors and quality fittings\nBright and well-ventilated rooms\nModular kitchen\nPremium bathrooms\nDedicated parking\nLift facility\nPeaceful and secure residential surroundings\nExcellent connectivity to major roads and daily conveniences\nSuitable for family living and investment\n\nLocated in a well-connected residential area, the property offers easy access to schools, hospitals, shopping centres, markets, restaurants, offices and major road networks.\n\nA perfect combination of luxury, comfort, privacy and convenience, this 3 BHK builder floor is an excellent opportunity for buyers looking for a premium home in Gurgaon.",
+  "purpose": "buy"
 }
