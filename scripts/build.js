@@ -453,23 +453,23 @@ function buildPropertyPages() {
           <div class="detail-price">${T.escapeHtml(listing.priceLabel)}</div>
         </div>
 
-        <div class="gallery">
-          <div class="gallery__main" data-gallery-main>
-            <img src="${images[0]}" alt="${T.escapeHtml(listing.title)}">
-            ${
-              images.length > 1
-                ? `<button type="button" class="gallery__nav gallery__nav--prev" data-gallery-nav="prev" aria-label="Previous photo">&#8249;</button>
-            <button type="button" class="gallery__nav gallery__nav--next" data-gallery-nav="next" aria-label="Next photo">&#8250;</button>`
-                : ""
-            }
-          </div>
-          <div class="gallery__thumbs">
-            ${images.map((img, i) => `<img src="${img}" data-gallery-thumb class="${i === 0 ? "is-active" : ""}" alt="View ${i + 1}">`).join("")}
-          </div>
-        </div>
-
         <div class="detail-layout">
           <div>
+            <div class="gallery">
+            <div class="gallery__main" data-gallery-main>
+              <img src="${images[0]}" alt="${T.escapeHtml(listing.title)}">
+              ${
+                images.length > 1
+                  ? `<button type="button" class="gallery__nav gallery__nav--prev" data-gallery-nav="prev" aria-label="Previous photo">&#8249;</button>
+              <button type="button" class="gallery__nav gallery__nav--next" data-gallery-nav="next" aria-label="Next photo">&#8250;</button>`
+                  : ""
+              }
+            </div>
+            <div class="gallery__thumbs">
+              ${images.map((img, i) => `<img src="${img}" data-gallery-thumb class="${i === 0 ? "is-active" : ""}" alt="View ${i + 1}">`).join("")}
+            </div>
+          </div>
+
             <h2>About this property</h2>
             ${T.paragraphs(listing.description)}
 

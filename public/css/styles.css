@@ -452,9 +452,9 @@ ul { padding-left: 1.2em; }
    with the tops/bottoms cut off). Sizing by aspect-ratio instead keeps the
    full photo visible at any screen width, and capping .gallery's width on
    desktop keeps it from stretching into an oddly short strip on wide
-   monitors. */
+   monitors. (Now the gallery sits inside the left column of .detail-layout,
+   so the contact card shows beside it and the column width does the capping.) */
 .gallery { max-width: 100%; }
-@media (min-width: 960px) { .gallery { max-width: 700px; } }
 .gallery__main { position: relative; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.6rem; }
 .gallery__main img { width: 100%; aspect-ratio: 4 / 3; max-height: 520px; object-fit: cover; display: block; }
 .gallery__nav {
