@@ -1,42 +1,41 @@
 {
-  "slug": "2bhk-apartment-sector-49-rent",
-  "title": "2 BHK Apartment for Rent in Sector 49",
-  "purpose": "rent",
-  "propertyType": "apartment",
-  "bhk": 2,
-  "price": 35000,
-  "priceLabel": "₹35,000/month",
-  "rentPeriod": "month",
-  "areaSqft": 1200,
-  "areaUnit": "sqft",
-  "localitySlug": "sector-49",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "semi-furnished",
-  "featured": true,
+  "bhk": 3,
+  "floorPlanImage": "",
+  "price": 65000,
   "reraNumber": "",
-  "description": "Semi-furnished 2 BHK apartment available for rent in a gated society in Sector 49, close to Sohna Road. Modular kitchen, wardrobes fitted, and one covered parking included.",
+  "slug": "3-bhk-new-builder-floor-for-rent",
+  "priceLabel": "₹65,000/month",
+  "postedDate": "2026-10-05",
+  "featured": true,
+  "localitySlug": "sector-49",
+  "furnishing": "semi-furnished",
+  "propertyType": "independent-house",
+  "areaUnit": "sqft",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Clubhouse",
     "Lift",
     "24x7 Security",
-    "Covered Parking",
-    "Power Backup"
+    "Covered Parking"
   ],
-  "images": [
-    "/images/listings/2bhk-apartment-sector-49-rent/1.svg",
-    "/images/listings/2bhk-apartment-sector-49-rent/2.svg",
-    "/images/listings/2bhk-apartment-sector-49-rent/3.svg",
-    "/images/listings/2bhk-apartment-sector-49-rent/4.svg",
-    "/images/listings/2bhk-apartment-sector-49-rent/5.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-09-01",
   "specs": {
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "balconies": 1,
-    "floor": "6 of 14",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "balconies": 2,
+    "floor": "4 of 4",
     "facing": "West",
-    "age": "4 years"
-  }
+    "age": "2 years"
+  },
+  "title": "3 BHK New Builder Floor For Rent",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-09-30-at-1.42.48-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-30-at-1.42.47-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-30-at-1.42.47-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-30-at-1.42.45-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-30-at-1.42.44-pm.jpeg"
+  ],
+  "areaSqft": 2300,
+  "rentPeriod": "month",
+  "description": "3 BHK New Builder Floor available for Rent in Gurugram, offering modern interiors, spacious rooms, excellent natural light, and a comfortable lifestyle. This newly constructed builder floor is ideal for families and corporate tenants looking for a premium and peaceful residential property.\n\nProperty Highlights:\n\nSpacious 3 BHK layout\nBrand-new construction\nModern and premium interiors\nWell-designed bedrooms and bathrooms\nModular kitchen\nAmple natural light and ventilation\nDedicated parking\nPeaceful and well-connected location\nSuitable for families and corporate tenants\n\nLocated in a prime residential area of Gurugram, the property provides convenient access to markets, schools, hospitals, offices, shopping destinations, and major roads.\n\nContact NestNeev Real Estate for Rent, Site Visit & More Details | www.nestneev.com ",
+  "purpose": "rent"
 }
