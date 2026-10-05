@@ -61,10 +61,27 @@
   new MutationObserver(enableMultiple).observe(document.documentElement, { childList: true, subtree: true });
 
   // Remember which button opened the library ("Choose an image" = empty slot).
+  var lastChooseBtn = null;
   document.addEventListener("click", function (e) {
     var b = e.target && e.target.closest && e.target.closest("button");
-    if (b) { var t = b.textContent.trim(); if (/^Choose (an image|different image)$/.test(t)) lastChooseText = t; }
+    if (b) { var t = b.textContent.trim(); if (/^Choose (an image|different image)$/.test(t)) { lastChooseText = t; lastChooseBtn = b; } }
   }, true);
+
+  // The Photos list = the smallest block around the "Add photos" button that
+  // contains photo slots. (Other image fields, e.g. Floor Plan, sit outside it.)
+  var SLOT_RE = /^Choose (an image|different image)$/;
+  function listRoot(add) {
+    var n = add && add.parentElement;
+    while (n && n !== document.body) {
+      var has = Array.prototype.some.call(n.querySelectorAll("button"), function (b) { return SLOT_RE.test(b.textContent.trim()); });
+      if (has) return n;
+      n = n.parentElement;
+    }
+    return null;
+  }
+  function emptySlotsIn(root) {
+    return Array.prototype.filter.call(root.querySelectorAll("button"), function (b) { return b.textContent.trim() === "Choose an image"; });
+  }
 
   /* ---------- 2) upload files one at a time through Decap ---------- */
   function waitUntilCleared(input) {
@@ -103,13 +120,14 @@
     for (var k = 0; k < names.length; k++) {
       say("Adding photo " + (k + 1) + " of " + names.length + " to the listing…");
       if (k > 0) {
-        var before = buttonByText(/^Choose an image$/).length;
         var add = buttonByText(/^Add photos?$/i)[0];
         if (!add) throw new Error("couldn't find the \"Add photos\" button");
         add.click();
+        // Wait for the new, empty slot INSIDE the Photos list (never another image field).
         var slots = await waitFor(function () {
-          var s = buttonByText(/^Choose an image$/);
-          return s.length > before ? s : null;
+          var root = listRoot(add);
+          var s = root ? emptySlotsIn(root) : [];
+          return s.length ? s : null;
         }, 8000, "a new photo slot");
         slots[slots.length - 1].click();               // the new entry is added at the end
         await waitFor(modalOpen, 8000, "the photo picker");
@@ -121,11 +139,16 @@
 
   async function run(input, files) {
     busy = true;
-    var autoAdd = lastChooseText === "Choose an image";   // empty slot -> safe to fill automatically
+    // Auto-fill only when opened from an EMPTY slot of the Photos list (not Floor Plan etc.).
+    var addBtn = buttonByText(/^Add photos?$/i)[0];
+    var root = addBtn ? listRoot(addBtn) : null;
+    var autoAdd = lastChooseText === "Choose an image" && !!root && !!lastChooseBtn && root.contains(lastChooseBtn);
     try {
       var beforeNames = cardNames();
       await uploadAll(input, files);
       await sleep(600);
+      // give the library a moment to show every new card (slow/background tabs render late)
+      await waitFor(function () { return cardNames().length >= beforeNames.length + files.length; }, 8000, "the new photos").catch(function () {});
       var after = cardNames();
       var fresh = after.filter(function (n) { return beforeNames.indexOf(n) === -1; });
       // Newest uploads appear first in the library, so reverse to get choose-order.
