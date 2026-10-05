@@ -32,20 +32,10 @@
     "age": "10 years"
   },
   "images": [
-    {
-      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/1.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/2.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/3.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/4.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-palam-vihar-rent/5.svg"
-    }
+    "/images/listings/2bhk-apartment-palam-vihar-rent/1.svg",
+    "/images/listings/2bhk-apartment-palam-vihar-rent/2.svg",
+    "/images/listings/2bhk-apartment-palam-vihar-rent/3.svg",
+    "/images/listings/2bhk-apartment-palam-vihar-rent/4.svg",
+    "/images/listings/2bhk-apartment-palam-vihar-rent/5.svg"
   ]
 }

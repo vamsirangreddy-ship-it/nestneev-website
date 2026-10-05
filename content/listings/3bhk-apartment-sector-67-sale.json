@@ -34,20 +34,10 @@
     "age": "2 years"
   },
   "images": [
-    {
-      "src": "/images/listings/3bhk-apartment-sector-67-sale/1.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-sector-67-sale/2.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-sector-67-sale/3.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-sector-67-sale/4.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-sector-67-sale/5.svg"
-    }
+    "/images/listings/3bhk-apartment-sector-67-sale/1.svg",
+    "/images/listings/3bhk-apartment-sector-67-sale/2.svg",
+    "/images/listings/3bhk-apartment-sector-67-sale/3.svg",
+    "/images/listings/3bhk-apartment-sector-67-sale/4.svg",
+    "/images/listings/3bhk-apartment-sector-67-sale/5.svg"
   ]
 }

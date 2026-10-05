@@ -32,20 +32,10 @@
     "age": "Under construction"
   },
   "images": [
-    {
-      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/1.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/2.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/3.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/4.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-new-gurugram-sector-108/5.svg"
-    }
+    "/images/listings/3bhk-apartment-new-gurugram-sector-108/1.svg",
+    "/images/listings/3bhk-apartment-new-gurugram-sector-108/2.svg",
+    "/images/listings/3bhk-apartment-new-gurugram-sector-108/3.svg",
+    "/images/listings/3bhk-apartment-new-gurugram-sector-108/4.svg",
+    "/images/listings/3bhk-apartment-new-gurugram-sector-108/5.svg"
   ]
 }

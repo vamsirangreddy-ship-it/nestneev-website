@@ -21,12 +21,8 @@
     "Gated Colony"
   ],
   "images": [
-    {
-      "src": "/images/listings/residential-plot-sector-82/1.svg"
-    },
-    {
-      "src": "/images/listings/residential-plot-sector-82/2.svg"
-    }
+    "/images/listings/residential-plot-sector-82/1.svg",
+    "/images/listings/residential-plot-sector-82/2.svg"
   ],
   "floorPlanImage": "",
   "postedDate": "2026-08-05",

@@ -24,21 +24,11 @@
     "Concierge"
   ],
   "images": [
-    {
-      "src": "/images/listings/4bhk-penthouse-golf-course-extension/1.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-penthouse-golf-course-extension/2.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-penthouse-golf-course-extension/3.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-penthouse-golf-course-extension/4.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-penthouse-golf-course-extension/5.svg"
-    }
+    "/images/listings/4bhk-penthouse-golf-course-extension/1.svg",
+    "/images/listings/4bhk-penthouse-golf-course-extension/2.svg",
+    "/images/listings/4bhk-penthouse-golf-course-extension/3.svg",
+    "/images/listings/4bhk-penthouse-golf-course-extension/4.svg",
+    "/images/listings/4bhk-penthouse-golf-course-extension/5.svg"
   ],
   "floorPlanImage": "",
   "postedDate": "2026-08-12",

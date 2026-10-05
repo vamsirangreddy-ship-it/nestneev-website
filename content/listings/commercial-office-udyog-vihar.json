@@ -33,14 +33,8 @@
     "age": "6 years"
   },
   "images": [
-    {
-      "src": "/images/listings/commercial-office-udyog-vihar/1.svg"
-    },
-    {
-      "src": "/images/listings/commercial-office-udyog-vihar/2.svg"
-    },
-    {
-      "src": "/images/listings/commercial-office-udyog-vihar/3.svg"
-    }
+    "/images/listings/commercial-office-udyog-vihar/1.svg",
+    "/images/listings/commercial-office-udyog-vihar/2.svg",
+    "/images/listings/commercial-office-udyog-vihar/3.svg"
   ]
 }

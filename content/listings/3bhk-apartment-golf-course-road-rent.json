@@ -25,21 +25,11 @@
     "24x7 Security"
   ],
   "images": [
-    {
-      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/1.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/2.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/3.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/4.svg"
-    },
-    {
-      "src": "/images/listings/3bhk-apartment-golf-course-road-rent/5.svg"
-    }
+    "/images/listings/3bhk-apartment-golf-course-road-rent/1.svg",
+    "/images/listings/3bhk-apartment-golf-course-road-rent/2.svg",
+    "/images/listings/3bhk-apartment-golf-course-road-rent/3.svg",
+    "/images/listings/3bhk-apartment-golf-course-road-rent/4.svg",
+    "/images/listings/3bhk-apartment-golf-course-road-rent/5.svg"
   ],
   "floorPlanImage": "",
   "postedDate": "2026-09-05",

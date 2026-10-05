@@ -23,15 +23,9 @@
     "Metro Connectivity"
   ],
   "images": [
-    {
-      "src": "/images/listings/commercial-office-mg-road/1.svg"
-    },
-    {
-      "src": "/images/listings/commercial-office-mg-road/2.svg"
-    },
-    {
-      "src": "/images/listings/commercial-office-mg-road/3.svg"
-    }
+    "/images/listings/commercial-office-mg-road/1.svg",
+    "/images/listings/commercial-office-mg-road/2.svg",
+    "/images/listings/commercial-office-mg-road/3.svg"
   ],
   "floorPlanImage": "",
   "postedDate": "2026-07-28",

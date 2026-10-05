@@ -23,21 +23,11 @@
     "Power Backup"
   ],
   "images": [
-    {
-      "src": "/images/listings/2bhk-apartment-sector-49-rent/1.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-sector-49-rent/2.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-sector-49-rent/3.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-sector-49-rent/4.svg"
-    },
-    {
-      "src": "/images/listings/2bhk-apartment-sector-49-rent/5.svg"
-    }
+    "/images/listings/2bhk-apartment-sector-49-rent/1.svg",
+    "/images/listings/2bhk-apartment-sector-49-rent/2.svg",
+    "/images/listings/2bhk-apartment-sector-49-rent/3.svg",
+    "/images/listings/2bhk-apartment-sector-49-rent/4.svg",
+    "/images/listings/2bhk-apartment-sector-49-rent/5.svg"
   ],
   "floorPlanImage": "",
   "postedDate": "2026-09-01",

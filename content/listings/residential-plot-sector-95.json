@@ -31,11 +31,7 @@
     "age": null
   },
   "images": [
-    {
-      "src": "/images/listings/residential-plot-sector-95/1.svg"
-    },
-    {
-      "src": "/images/listings/residential-plot-sector-95/2.svg"
-    }
+    "/images/listings/residential-plot-sector-95/1.svg",
+    "/images/listings/residential-plot-sector-95/2.svg"
   ]
 }

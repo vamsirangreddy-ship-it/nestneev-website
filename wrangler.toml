@@ -10,6 +10,13 @@ main = "worker.js"
 directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "404-page"
+# IMPORTANT: a browser's native <form method="POST"> submit is a
+# "navigation" request. With not_found_handling set, Cloudflare answers
+# navigation requests for non-asset paths itself (404 page, or 405 for
+# POST) WITHOUT ever running worker.js, so the contact/sell forms died
+# with "HTTP ERROR 405". Forcing the worker to run first for /api/*
+# makes form posts reach handleEnquiry(); everything else is unchanged.
+run_worker_first = ["/api/*"]
 
 [vars]
 # Not sensitive — just where enquiry emails get sent. The Resend API

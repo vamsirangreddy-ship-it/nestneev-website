@@ -24,21 +24,11 @@
     "Power Backup"
   ],
   "images": [
-    {
-      "src": "/images/listings/4bhk-villa-sushant-lok/1.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-villa-sushant-lok/2.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-villa-sushant-lok/3.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-villa-sushant-lok/4.svg"
-    },
-    {
-      "src": "/images/listings/4bhk-villa-sushant-lok/5.svg"
-    }
+    "/images/listings/4bhk-villa-sushant-lok/1.svg",
+    "/images/listings/4bhk-villa-sushant-lok/2.svg",
+    "/images/listings/4bhk-villa-sushant-lok/3.svg",
+    "/images/listings/4bhk-villa-sushant-lok/4.svg",
+    "/images/listings/4bhk-villa-sushant-lok/5.svg"
   ],
   "floorPlanImage": "",
   "postedDate": "2026-08-15",
