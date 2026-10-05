@@ -170,13 +170,21 @@ ${siteFooter(config)}
 // array of plain values (e.g. ["/images/uploads/a.jpg", ...]), not objects
 // like [{src: "..."}]. Some older/seeded listings still use the object
 // shape though, so accept either to avoid broken <img> tags either way.
+// Always return an array of image paths, whatever shape the CMS saved
+// (array of strings, array of {src}, a single string, or nothing).
+function imageList(images) {
+  if (!images) return [];
+  const arr = Array.isArray(images) ? images : [images];
+  return arr.map(imageSrc).filter(Boolean);
+}
+
 function imageSrc(item) {
   if (typeof item === "string") return item;
   return (item && item.src) || "";
 }
 
 function propertyCard(listing, locality, config) {
-  const imgs = listing.images && listing.images.length ? listing.images.map(imageSrc).filter(Boolean) : [];
+  const imgs = imageList(listing.images);
   if (!imgs.length) imgs.push("/images/listings/exterior.svg");
   const hasGallery = imgs.length > 1;
   const detailHref = `/property/${listing.slug}/`;
@@ -262,6 +270,7 @@ module.exports = {
   NAV_ITEMS,
   escapeHtml,
   imageSrc,
+  imageList,
   waLink,
   telLink,
   paragraphs,

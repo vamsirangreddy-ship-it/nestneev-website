@@ -68,10 +68,11 @@ collections:
       - { label: "RERA Registration Number (leave blank if not applicable)", name: "reraNumber", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Amenities", name: "amenities", widget: "list", hint: "Add one amenity per line" }
-      # One "Choose images" button: in the media library you can tick/drag-select
-      # MANY files at once (and upload a whole batch), and all of them are added.
-      # Saves a flat list of paths, e.g. ["/images/uploads/a.jpg", ...].
-      - { label: "Photos", name: "images", widget: "image", allow_multiple: true, hint: "Click Choose images, then upload or select as many photos as you want at once. First photo is the cover." }
+      # Photos are a list so every photo is its own entry. Saves a FLAT list of paths,
+      # e.g. ["/images/uploads/a.jpg", ...]. (Decap's built-in media library can only
+      # pick ONE image per field, so a plain multi-select image field does not work.
+      # admin/index.html adds a bulk-upload + "Add all photos" helper on top of this.)
+      - { label: "Photos", name: "images", widget: "list", field: { label: "Photo", name: "src", widget: "image", allow_multiple: false } }
       - { label: "Floor Plan Image (optional)", name: "floorPlanImage", widget: "image", required: false, allow_multiple: false }
       - { label: "Date Posted", name: "postedDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
       - label: "Specifications"
