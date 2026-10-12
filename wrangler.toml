@@ -21,5 +21,8 @@ run_worker_first = ["/api/*"]
 [vars]
 # Not sensitive — just where enquiry emails get sent. The Resend API
 # key itself is a secret (wrangler secret put RESEND_API_KEY), never here.
-CONTACT_TO_EMAIL = "hello@nestneev.com"
-CONTACT_PHONE_DISPLAY = "+91 98XXX XXXXX"
+CONTACT_TO_EMAIL = "neevnest@gmail.com"
+CONTACT_PHONE_DISPLAY = "+91 9211859592"
+CONTACT_WHATSAPP = "919211859592"
+# Optional, after verifying nestneev.com in Resend:
+# CONTACT_FROM_EMAIL = "NestNeev <hello@nestneev.com>"

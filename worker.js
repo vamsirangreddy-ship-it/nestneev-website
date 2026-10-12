@@ -20,9 +20,14 @@
 // no secret needed, it's not sensitive). Emails are sent from Resend's
 // shared onboarding@resend.dev address, which works immediately with no
 // domain setup; you can switch to a nestneev.com address later by
-// verifying the domain in Resend and changing FROM_ADDRESS below.
+// verifying the domain in Resend and setting CONTACT_FROM_EMAIL in
+// wrangler.toml (e.g. "NestNeev <hello@nestneev.com>"). NOTE: until a
+// domain is verified, Resend only delivers to the email address the
+// Resend account was created with, so CONTACT_TO_EMAIL must match it.
+// If email fails for any reason the visitor is offered a pre-filled
+// WhatsApp message instead, and the reason is logged (Workers -> Logs).
 
-const FROM_ADDRESS = "NestNeev Website <onboarding@resend.dev>";
+const DEFAULT_FROM = "NestNeev Website <onboarding@resend.dev>"; // override with CONTACT_FROM_EMAIL once a domain is verified in Resend
 const MAX_ATTACHMENT_BYTES = 30 * 1024 * 1024; // stay well under Resend's ~40MB request limit
 
 export default {
@@ -86,23 +91,33 @@ async function handleEnquiry(request, env) {
     text
   )}</pre>`;
 
-  let sent = false;
+  let result = { ok: false, reason: "RESEND_API_KEY is not set" };
   if (env.RESEND_API_KEY) {
-    sent = await sendViaResend(env, { subject, text, html, attachments });
+    result = await sendViaResend(env, {
+      subject,
+      text,
+      html,
+      attachments,
+      replyTo: (form.get("email") || "").toString().trim(),
+    });
   }
 
   const origin = new URL(request.url).origin;
-  if (sent) {
+  if (result.ok) {
     return Response.redirect(`${origin}/thank-you/`, 303);
   }
 
-  // Don't show a fake "thank you" if the email genuinely failed to
-  // send — that would hide the problem instead of fixing it. Tell the
-  // visitor to reach out directly instead of losing their enquiry
-  // silently.
-  return new Response(failurePage(env), {
-    status: 502,
-    headers: { "Content-Type": "text/html; charset=utf-8" },
+  // Email could not be sent. Never show a fake "thank you", and never just
+  // lose the lead: log the reason (visible in Cloudflare -> Workers -> Logs)
+  // and hand the visitor a one-tap WhatsApp message with everything they typed.
+  console.error("Enquiry email failed:", result.reason);
+  return new Response(fallbackPage(env, text), {
+    status: 200,
+    headers: {
+      "Content-Type": "text/html; charset=utf-8",
+      "X-Enquiry-Email": "failed",
+      "Cache-Control": "no-store",
+    },
   });
 }
 
@@ -139,26 +154,30 @@ function describeSubmission(formName, form) {
   };
 }
 
-async function sendViaResend(env, { subject, text, html, attachments }) {
+async function sendViaResend(env, { subject, text, html, attachments, replyTo }) {
   try {
+    const payload = {
+      from: env.CONTACT_FROM_EMAIL || DEFAULT_FROM,
+      to: [env.CONTACT_TO_EMAIL || "hello@nestneev.com"],
+      subject,
+      text,
+      html,
+    };
+    if (attachments.length) payload.attachments = attachments;
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(replyTo)) payload.reply_to = replyTo;
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${env.RESEND_API_KEY}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        from: FROM_ADDRESS,
-        to: [env.CONTACT_TO_EMAIL || "hello@nestneev.com"],
-        subject,
-        text,
-        html,
-        attachments: attachments.length ? attachments : undefined,
-      }),
+      body: JSON.stringify(payload),
     });
-    return res.ok;
+    if (res.ok) return { ok: true };
+    const body = (await res.text()).slice(0, 500);
+    return { ok: false, reason: `Resend HTTP ${res.status}: ${body}` };
   } catch (e) {
-    return false;
+    return { ok: false, reason: `Resend request failed: ${e && e.message ? e.message : e}` };
   }
 }
 
@@ -178,12 +197,18 @@ function escapeHtml(s) {
   );
 }
 
-function failurePage(env) {
-  const phone = env.CONTACT_PHONE_DISPLAY || "our team";
-  return `<!doctype html><html><head><meta charset="utf-8"><title>Something went wrong</title></head>
-<body style="font-family:system-ui,sans-serif;max-width:520px;margin:4rem auto;text-align:center;">
-<h1>Sorry, something went wrong</h1>
-<p>We couldn't send your message just now. Please call or WhatsApp ${phone} directly, or try again in a moment.</p>
+function fallbackPage(env, enquiryText) {
+  const phone = escapeHtml(env.CONTACT_PHONE_DISPLAY || "");
+  const wa = (env.CONTACT_WHATSAPP || "").replace(/\D/g, "");
+  const message = `Hi NestNeev, I just tried to send an enquiry from your website:\n\n${enquiryText}`.slice(0, 1500);
+  const waHref = wa ? `https://wa.me/${wa}?text=${encodeURIComponent(message)}` : "";
+  const tel = (env.CONTACT_PHONE_DISPLAY || "").replace(/[^\d+]/g, "");
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>One more step - NestNeev</title></head>
+<body style="font-family:system-ui,sans-serif;max-width:520px;margin:3rem auto;padding:0 1rem;text-align:center;line-height:1.5;">
+<h1>One more step</h1>
+<p>We couldn't deliver your enquiry by email just now. Please tap below to send the same details to us on WhatsApp &mdash; it's already filled in for you.</p>
+${waHref ? `<p><a href="${waHref}" style="display:inline-block;background:#25D366;color:#fff;padding:.9rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:700;">Send on WhatsApp</a></p>` : ""}
+${tel ? `<p>Or call us: <a href="tel:${tel}">${phone}</a></p>` : ""}
 <p><a href="/contact/">Back to Contact page</a></p>
 </body></html>`;
 }

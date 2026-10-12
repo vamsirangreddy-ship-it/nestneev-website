@@ -31,11 +31,33 @@ function loadJSONDir(dir) {
 
 const config = JSON.parse(fs.readFileSync(path.join(CONTENT, "config.json"), "utf8"));
 const listings = loadJSONDir(path.join(CONTENT, "listings")).sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
+// Safety net: if a photo file was deleted in the CMS media library but a
+// listing still points at it, drop the reference (and warn) instead of
+// shipping a broken image on the homepage / listing cards.
+for (const l of listings) {
+  l.images = T.imageList(l.images).filter((src) => {
+    if (/^https?:/i.test(src) || /^data:/i.test(src)) return true;
+    if (fs.existsSync(path.join(PUBLIC, src))) return true;
+    console.warn(`WARNING: listing "${l.slug}" references missing photo ${src} - skipped.`);
+    return false;
+  });
+}
 const localities = loadJSONDir(path.join(CONTENT, "localities")).sort((a, b) => a.name.localeCompare(b.name));
 const blogPosts = loadJSONDir(path.join(CONTENT, "blog")).sort((a, b) => new Date(b.date) - new Date(a.date));
 const testimonials = JSON.parse(fs.readFileSync(path.join(CONTENT, "testimonials.json"), "utf8"));
 
 const localityBySlug = Object.fromEntries(localities.map((l) => [l.slug, l]));
+
+// Listings can point at a locality that has since been removed/renamed in the
+// CMS. Show a readable name from the slug ("sector-67" -> "Sector 67") instead
+// of leaving the locality blank. (No locality page is created for these.)
+for (const l of listings) {
+  if (l.localitySlug && !localityBySlug[l.localitySlug]) {
+    const name = String(l.localitySlug).trim().replace(/[-_]+/g, " ").replace(/\b\w+/g, (w) => (w.length <= 2 && /^[a-z]+$/i.test(w) ? w.toUpperCase() : w[0].toUpperCase() + w.slice(1)));
+    localityBySlug[l.localitySlug] = { slug: l.localitySlug, name, stub: true };
+    console.warn(`WARNING: listing "${l.slug}" uses locality "${l.localitySlug}" which is not in the CMS Localities list - showing "${name}".`);
+  }
+}
 
 /* ---------------------------------------------------------------------- */
 /* File writer                                                             */
@@ -174,8 +196,14 @@ function statsStrip() {
   </div>`;
 }
 
+// Placeholder/sample testimonials (seeded text) are never shown to visitors;
+// the whole section stays hidden until real reviews are added in the CMS.
+const realTestimonials = (testimonials.items || []).filter(
+  (t) => t && t.quote && !/sample|edit me|placeholder/i.test(`${t.name} ${t.quote}`)
+);
+
 function testimonialGrid() {
-  return `<div class="testimonial-grid">${testimonials.items
+  return `<div class="testimonial-grid">${realTestimonials
     .map(
       (t) => `<div class="testimonial-card">
         <p class="testimonial-card__quote">&ldquo;${T.escapeHtml(t.quote)}&rdquo;</p>
@@ -292,7 +320,7 @@ function buildHomepage() {
     </div>
   </section>
 
-  <section class="section">
+  ${realTestimonials.length ? `<section class="section">
     <div class="container">
       <div class="section__header section__header--center">
         <span class="eyebrow">Testimonials</span>
@@ -300,7 +328,7 @@ function buildHomepage() {
       </div>
       ${testimonialGrid()}
     </div>
-  </section>
+  </section>` : ""}
   `;
 
   writePage("/", T.layout({ config, title: "", path: "/", content }));
