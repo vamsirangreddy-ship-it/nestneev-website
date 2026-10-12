@@ -1,20 +1,17 @@
 {
-  "slug": "3bhk-apartment-golf-course-road-rent",
-  "title": "3 BHK Fully-Furnished Apartment for Rent on Golf Course Road",
-  "purpose": "rent",
-  "propertyType": "apartment",
   "bhk": 3,
-  "price": 85000,
-  "priceLabel": "₹85,000/month",
-  "rentPeriod": "month",
-  "areaSqft": 2100,
-  "areaUnit": "sqft",
-  "localitySlug": "golf-course-road",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "fully-furnished",
-  "featured": true,
+  "floorPlanImage": "/images/uploads/3ldk.png",
+  "price": 24000,
   "reraNumber": "",
-  "description": "Premium fully-furnished 3 BHK in a landmark high-rise on Golf Course Road, with skyline views, modular interiors, and access to a large clubhouse.",
+  "slug": "krisumi-waterfall-residences-2-3-4bhk",
+  "priceLabel": "₹6.1cr",
+  "postedDate": "2026-10-12",
+  "featured": true,
+  "localitySlug": "dwarka-expressway-gurgaon",
+  "furnishing": "fully-furnished",
+  "propertyType": "apartment",
+  "areaUnit": "sqft",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Clubhouse",
     "Swimming Pool",
@@ -24,21 +21,24 @@
     "Power Backup",
     "24x7 Security"
   ],
-  "images": [
-    "/images/listings/3bhk-apartment-golf-course-road-rent/1.svg",
-    "/images/listings/3bhk-apartment-golf-course-road-rent/2.svg",
-    "/images/listings/3bhk-apartment-golf-course-road-rent/3.svg",
-    "/images/listings/3bhk-apartment-golf-course-road-rent/4.svg",
-    "/images/listings/3bhk-apartment-golf-course-road-rent/5.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-09-05",
   "specs": {
     "bedrooms": 3,
     "bathrooms": 3,
     "balconies": 2,
-    "floor": "21 of 30",
+    "floor": "12 of 24",
     "facing": "North-East",
-    "age": "3 years"
-  }
+    "age": "New"
+  },
+  "title": "Krisumi Waterfall Residences 2, 3, 4BHK",
+  "images": [
+    "/images/uploads/krisumi-waterfall-residences-2-.webp",
+    "/images/uploads/krisumi-waterfall-residences-2-.jpg",
+    "/images/uploads/krisumi-waterfall-residences-1-.png",
+    "/images/uploads/kirsumi.webp",
+    "/images/uploads/krisumi.webp"
+  ],
+  "areaSqft": 2538,
+  "rentPeriod": null,
+  "description": "Welcome to Krisumi Waterfall Residences, Sector 36A, Gurgaon, an exceptional luxury residential project that blends Japanese-inspired aesthetics with modern Indian living. Designed to offer comfort, elegance and a premium residential experience, the project features sophisticated architecture, spacious residences and thoughtfully designed lifestyle amenities.\n\nLocated near the rapidly developing Dwarka Expressway corridor, Krisumi Waterfall Residences enjoys convenient connectivity to major destinations across Gurugram and Delhi. The location offers access to NH-48, commercial districts, corporate offices, educational institutions, healthcare facilities and shopping destinations, making it suitable for families and working professionals.\nThe project focuses on contemporary design, landscaped surroundings and lifestyle-oriented facilities. Residents can enjoy a refined living environment complemented by modern conveniences, recreational spaces and thoughtfully planned common areas.\n\nKey Highlights\n- Premium luxury apartments in Sector 36A, Gurugram\n- Japanese-inspired architecture and contemporary design\n- Located near Dwarka Expressway\n- Connectivity to NH-48 and major Gurgaon business hubs\n- Modern lifestyle amenities and recreational facilities\n- Landscaped surroundings and elegant residential spaces\n- Suitable for end-users and long-term property investors\n\nLocation Advantages\n\nKrisumi Waterfall Residences benefits from its location in Sector 36A, Gurugram, within the Dwarka Expressway growth corridor. Residents can access important business areas, retail destinations and transport routes connecting Gurgaon with Delhi. The location is also convenient for people working in major corporate and commercial hubs across the city.\n\nWhy Consider Krisumi Waterfall Residences?\n\nWhether you are looking to buy a luxury apartment for personal use or explore real estate investment opportunities in Gurgaon, Krisumi Waterfall Residences offers a combination of premium design, modern lifestyle features and strategic location advantages. Its position near Dwarka Expressway makes it a development worth considering when exploring luxury residential properties in Gurugram.",
+  "purpose": "buy"
 }
