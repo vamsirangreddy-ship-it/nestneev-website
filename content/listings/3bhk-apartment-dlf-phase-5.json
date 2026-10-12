@@ -1,20 +1,17 @@
 {
-  "slug": "3bhk-apartment-dlf-phase-5",
-  "title": "3 BHK Apartment in DLF Phase 5",
-  "purpose": "buy",
-  "propertyType": "apartment",
   "bhk": 3,
-  "price": 25000000,
-  "priceLabel": "₹2.5 Cr",
-  "rentPeriod": null,
-  "areaSqft": 1850,
-  "areaUnit": "sqft",
-  "localitySlug": "dlf-phase-5",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "semi-furnished",
+  "floorPlanImage": "",
+  "price": 23000,
+  "reraNumber": "",
+  "slug": "3-bhk-apartment-in-ambience-creacions",
+  "priceLabel": "₹4.25 Cr",
+  "postedDate": "2026-10-12",
   "featured": true,
-  "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
-  "description": "A well-maintained 3 BHK apartment in a gated high-rise society in DLF Phase 5, close to Golf Course Road. Bright, cross-ventilated layout with a large living/dining area and two covered parking slots.",
+  "localitySlug": "sector-22-gurgaon",
+  "furnishing": "semi-furnished",
+  "propertyType": "apartment",
+  "areaUnit": "sqft",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Clubhouse",
     "Swimming Pool",
@@ -24,21 +21,24 @@
     "Children's Play Area",
     "Gymnasium"
   ],
-  "images": [
-    "/images/listings/3bhk-apartment-dlf-phase-5/1.svg",
-    "/images/listings/3bhk-apartment-dlf-phase-5/2.svg",
-    "/images/listings/3bhk-apartment-dlf-phase-5/3.svg",
-    "/images/listings/3bhk-apartment-dlf-phase-5/4.svg",
-    "/images/listings/3bhk-apartment-dlf-phase-5/5.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-08-20",
   "specs": {
     "bedrooms": 3,
     "bathrooms": 3,
     "balconies": 2,
     "floor": "12 of 24",
     "facing": "East",
-    "age": "2 years"
-  }
+    "age": "New"
+  },
+  "title": "3 BHK Apartment in Ambience creacions ",
+  "images": [
+    "/images/uploads/ambince-creastion-2-.jpg",
+    "/images/uploads/ambince-creastion-2-.jpg",
+    "/images/uploads/ambince-creastion-3-.jpg",
+    "/images/uploads/ambince-creastion-2-.webp",
+    "/images/uploads/ambince-creastion-1-.webp"
+  ],
+  "areaSqft": 1860,
+  "rentPeriod": null,
+  "description": "Luxury Flats for Sale in Ambience Creacions, Gurugram\n\nLooking to buy a luxury apartment in Ambience Creacions, Gurugram? Discover premium residential properties offering spacious layouts, elegant interiors, modern lifestyle amenities, and a prestigious address in Gurgaon. Ambience Creacions is an attractive option for homebuyers seeking luxury apartments with convenient access to Delhi, IGI Airport, Dwarka Expressway, and major commercial hubs.\n\nExplore luxury flats for sale in Ambience Creacions with NestNeev Real Estate. Whether you are searching for a spacious family home or a premium residential investment, we can help you explore available properties according to your budget, configuration, and preferences.\n\nEnjoy convenient access to shopping centres, schools, hospitals, business districts, and essential daily services. Find property options with suitable layouts, facilities, and location advantages to match your lifestyle.\n\n**Why Choose Ambience Creacions, Gurugram?**\n- Premium luxury apartments for sale\n- Spacious residences and modern interiors\n- Contemporary lifestyle amenities\n- Convenient connectivity to Delhi and major Gurugram locations\n- Access to shopping, healthcare, education, and business hubs\n- Residential options for families and property investors\n\n**Buy Your Dream Home with NestNeev Real Estate**\n\nContact NestNeev Real Estate for the latest available flats, property prices, floor plans, detailed specifications, and site visits at Ambience Creacions, Gurugram.\n\nExplore premium properties with NestNeev Real Estate — your property partner for buying, selling, and renting residential properties in Gurgaon.",
+  "purpose": "buy"
 }
