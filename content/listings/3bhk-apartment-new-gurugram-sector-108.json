@@ -1,28 +1,23 @@
 {
-  "slug": "3bhk-apartment-new-gurugram-sector-108",
-  "title": "3 BHK Apartment for Sale in Sector 108 (New Gurugram)",
-  "purpose": "buy",
-  "propertyType": "apartment",
   "bhk": 3,
+  "floorPlanImage": "",
   "price": 9500000,
-  "priceLabel": "₹95 Lakh",
-  "rentPeriod": null,
-  "areaSqft": 1650,
-  "areaUnit": "sqft",
-  "localitySlug": "new-gurugram-sector-108",
-  "possessionStatus": "under-construction",
-  "furnishing": "unfurnished",
-  "featured": true,
   "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
-  "description": "Under-construction 3 BHK in a new launch along the Dwarka Expressway corridor in Sector 108, offering larger layouts at a relatively accessible price point.",
+  "slug": "3bhk-apartment-new-gurugram-sector-108",
+  "priceLabel": "₹95 Lakh",
+  "postedDate": "2026-08-22",
+  "featured": true,
+  "localitySlug": "new-gurugram-sector-108",
+  "furnishing": "unfurnished",
+  "propertyType": "apartment",
+  "areaUnit": "sqft",
+  "possessionStatus": "under-construction",
   "amenities": [
     "Clubhouse (Planned)",
     "Landscaped Podium",
     "Reserved Parking",
     "Construction-Linked Payment Plan"
   ],
-  "floorPlanImage": "",
-  "postedDate": "2026-08-22",
   "specs": {
     "bedrooms": 3,
     "bathrooms": 3,
@@ -31,11 +26,16 @@
     "facing": "West",
     "age": "Under construction"
   },
+  "title": "3 BHK Apartment for Sale in Sector 108 (New Gurugram)",
   "images": [
-    "/images/listings/3bhk-apartment-new-gurugram-sector-108/1.svg",
-    "/images/listings/3bhk-apartment-new-gurugram-sector-108/2.svg",
-    "/images/listings/3bhk-apartment-new-gurugram-sector-108/3.svg",
-    "/images/listings/3bhk-apartment-new-gurugram-sector-108/4.svg",
-    "/images/listings/3bhk-apartment-new-gurugram-sector-108/5.svg"
-  ]
+    "/images/uploads/whatsapp-image-2026-09-13-at-8.31.33-pm-5-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-13-at-8.31.33-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-13-at-8.31.34-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-13-at-8.31.33-pm-4-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-13-at-8.31.33-pm-3-.jpeg"
+  ],
+  "areaSqft": 1650,
+  "rentPeriod": null,
+  "description": "Under-construction 3 BHK in a new launch along the Dwarka Expressway corridor in Sector 108, offering larger layouts at a relatively accessible price point.",
+  "purpose": "buy"
 }
