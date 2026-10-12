@@ -1,20 +1,17 @@
 {
-  "slug": "4bhk-penthouse-golf-course-extension",
-  "title": "4 BHK Penthouse on Golf Course Extension Road",
-  "purpose": "buy",
-  "propertyType": "apartment",
   "bhk": 4,
+  "floorPlanImage": "",
   "price": 95000000,
-  "priceLabel": "₹9.5 Cr",
-  "rentPeriod": null,
-  "areaSqft": 4200,
-  "areaUnit": "sqft",
-  "localitySlug": "golf-course-extension-road",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "fully-furnished",
-  "featured": true,
   "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
-  "description": "Duplex penthouse with a private terrace garden in a premium low-density society on Golf Course Extension Road. Premium fittings throughout, with panoramic city views.",
+  "slug": "4bhk-penthouse-golf-course-extension",
+  "priceLabel": "₹9.5 Cr",
+  "postedDate": "2026-08-12",
+  "featured": true,
+  "localitySlug": "golf-course-extension-road",
+  "furnishing": "fully-furnished",
+  "propertyType": "apartment",
+  "areaUnit": "sqft",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Private Terrace Garden",
     "Clubhouse",
@@ -23,15 +20,6 @@
     "4 Car Parking",
     "Concierge"
   ],
-  "images": [
-    "/images/listings/4bhk-penthouse-golf-course-extension/1.svg",
-    "/images/listings/4bhk-penthouse-golf-course-extension/2.svg",
-    "/images/listings/4bhk-penthouse-golf-course-extension/3.svg",
-    "/images/listings/4bhk-penthouse-golf-course-extension/4.svg",
-    "/images/listings/4bhk-penthouse-golf-course-extension/5.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-08-12",
   "specs": {
     "bedrooms": 4,
     "bathrooms": 5,
@@ -39,5 +27,14 @@
     "floor": "Duplex - 24 & 25 of 25",
     "facing": "East",
     "age": "2 years"
-  }
+  },
+  "title": "4 BHK Penthouse on Golf Course Extension Road",
+  "images": [
+    "/images/uploads/diplomatic-puri.jpg",
+    "/images/uploads/ambince-creastion-2-.webp"
+  ],
+  "areaSqft": 4200,
+  "rentPeriod": null,
+  "description": "Duplex penthouse with a private terrace garden in a premium low-density society on Golf Course Extension Road. Premium fittings throughout, with panoramic city views.",
+  "purpose": "buy"
 }
