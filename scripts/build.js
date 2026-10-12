@@ -255,12 +255,49 @@ function enquiryForm({ formName, hiddenFields = {}, submitLabel = "Send Enquiry"
 /* ---------------------------------------------------------------------- */
 /* Homepage                                                                */
 /* ---------------------------------------------------------------------- */
+/* Hero background: a slow crossfade of photos (default) or, if the client
+   uploads one in Site Settings -> "Hero background video", a looping muted
+   video. Photos come from config.heroImages (CMS) or these defaults. */
+const DEFAULT_HERO_IMAGES = ["/images/hero/hero-1.jpg", "/images/hero/hero-2.jpg", "/images/hero/hero-3.jpg"];
+let _heroCache = null;
+function heroBackground() {
+  if (_heroCache) return _heroCache;
+  const imgs = (config.heroImages === undefined ? DEFAULT_HERO_IMAGES : T.imageList(config.heroImages)).slice(0, 6);
+  const video = typeof config.heroVideo === "string" ? config.heroVideo.trim() : "";
+  if (!imgs.length && !video) return (_heroCache = { html: "", style: "" });
+
+  const SECONDS_PER_SLIDE = 6;
+  const n = imgs.length;
+  const total = n * SECONDS_PER_SLIDE;
+  const fade = (1 / n) * 100 * 0.25;      // fade-in/out = 25% of a slide's share
+  const hold = (1 / n) * 100;
+  const style =
+    n > 1 && !video
+      ? `<style>@keyframes heroFade{0%{opacity:0}${fade.toFixed(2)}%{opacity:1}${hold.toFixed(2)}%{opacity:1}${(hold + fade).toFixed(2)}%{opacity:0}100%{opacity:0}}</style>`
+      : "";
+  const slides = imgs
+    .map((src, i) => {
+      const anim = n > 1 && !video ? ` style="animation:heroFade ${total}s linear ${i * SECONDS_PER_SLIDE}s infinite"` : "";
+      const first = i === 0;
+      // first photo is always visible underneath (video poster / reduced-motion / before animation starts)
+      const cls = "hero__slide" + (first ? " hero__slide--first" : "");
+      return `<img class="${cls}" src="${T.escapeHtml(src)}" alt=""${first ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"${first && n > 1 && !video ? "" : anim}>`;
+    })
+    .join("");
+  const vid = video
+    ? `<video class="hero__video" autoplay muted loop playsinline preload="metadata"${imgs[0] ? ` poster="${T.escapeHtml(imgs[0])}"` : ""}><source src="${T.escapeHtml(video)}"></video>`
+    : "";
+  return (_heroCache = { html: `<div class="hero__bg" aria-hidden="true">${slides}${vid}</div>`, style });
+}
+
 function buildHomepage() {
   const featured = listings.filter((l) => l.featured);
   const featuredLocalities = localities.filter((l) => l.featured);
 
   const content = `
-  <section class="hero">
+  ${heroBackground().style}
+  <section class="hero${heroBackground().html ? " hero--media" : ""}">
+    ${heroBackground().html}
     <div class="container hero__inner">
       <span class="eyebrow">Gurugram, Haryana</span>
       <h1>Find your next home in Gurugram &mdash; Buy, Sell, or Rent with confidence.</h1>

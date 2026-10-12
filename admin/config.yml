@@ -171,6 +171,8 @@ collections:
               - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
               - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
               - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+          - { label: "Hero Background Photos", hint: "Homepage slideshow behind the main heading: 1 to 6 wide (landscape) photos. Leave the list empty for a plain blue background.", name: "heroImages", widget: "list", required: false, field: { label: "Photo", name: "src", widget: "image" } }
+          - { label: "Hero Background Video (optional)", hint: "MP4, ideally under 8 MB. If set, it plays on desktop instead of the slideshow (phones keep the photo).", name: "heroVideo", widget: "file", required: false }
           - { label: "RERA Disclaimer Text", name: "reraDisclaimerShort", widget: "text" }
           - label: "Homepage Stats"
             name: "stats"
