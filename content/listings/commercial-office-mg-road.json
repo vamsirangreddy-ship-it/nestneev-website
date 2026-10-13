@@ -1,20 +1,17 @@
 {
-  "slug": "commercial-office-mg-road",
-  "title": "Commercial Office Space on MG Road",
-  "purpose": "buy",
-  "propertyType": "commercial",
   "bhk": null,
-  "price": 18000000,
-  "priceLabel": "₹1.8 Cr",
-  "rentPeriod": null,
-  "areaSqft": 2200,
-  "areaUnit": "sqft",
-  "localitySlug": "mg-road",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "unfurnished",
-  "featured": false,
+  "floorPlanImage": "",
+  "price": 34500000,
   "reraNumber": "",
-  "description": "Bare-shell commercial office space in a Grade-A building on MG Road, walking distance from the metro station. Suited for corporate offices, consulting firms, or studios.",
+  "slug": "m3m-sector-113-gurugram",
+  "priceLabel": "₹3.45 Cr",
+  "postedDate": "2026-10-13",
+  "featured": false,
+  "localitySlug": "dwarka-expressway-gurgaon",
+  "furnishing": "unfurnished",
+  "propertyType": "commercial",
+  "areaUnit": "sqft",
+  "possessionStatus": "under-construction",
   "amenities": [
     "Central AC Ready",
     "24x7 Security",
@@ -22,19 +19,22 @@
     "Reserved Parking",
     "Metro Connectivity"
   ],
-  "images": [
-    "/images/listings/commercial-office-mg-road/1.svg",
-    "/images/listings/commercial-office-mg-road/2.svg",
-    "/images/listings/commercial-office-mg-road/3.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-07-28",
   "specs": {
     "bedrooms": null,
     "bathrooms": 2,
     "balconies": 0,
     "floor": "5 of 9",
-    "facing": "South",
-    "age": "3 years"
-  }
+    "facing": "East",
+    "age": "New"
+  },
+  "title": "M3M Sector 113 Gurugram ",
+  "images": [
+    "/images/uploads/commercial-7-.webp",
+    "/images/uploads/commercial-2-.webp",
+    "/images/uploads/commercial-5-.webp"
+  ],
+  "areaSqft": 450,
+  "rentPeriod": null,
+  "description": "**Commercial Shops for Sale in M3M Sector 113, Gurgaon**\n\nExplore premium commercial shops for sale in M3M Sector 113, Gurugram, strategically located on the Dwarka Expressway near Delhi. This commercial destination offers an opportunity for investors and business owners seeking retail space in a growing location with connectivity to Delhi, Dwarka and IGI Airport. Ideal for retail outlets, showrooms and businesses, subject to project permissions and unit specifications. Contact NestNeev Real Estate for shop sizes, prices, availability and site visits.",
+  "purpose": "buy"
 }
