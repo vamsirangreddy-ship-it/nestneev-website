@@ -1,31 +1,22 @@
 {
-  "slug": "residential-plot-sector-82",
-  "title": "Residential Plot in Sector 82",
-  "purpose": "buy",
-  "propertyType": "plot",
   "bhk": null,
+  "floorPlanImage": "",
   "price": 40000000,
-  "priceLabel": "₹4 Cr",
-  "rentPeriod": null,
-  "areaSqft": 2250,
-  "areaUnit": "sqyd",
-  "localitySlug": "sector-82",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "unfurnished",
-  "featured": false,
   "reraNumber": "PLACEHOLDER-HRERA-GGM-0000",
-  "description": "Clear-title residential plot (250 sq. yd.) in a licensed colony in Sector 82, New Gurugram, with wide approach road and all basic infrastructure in place.",
+  "slug": "residential-plot-sector-82",
+  "priceLabel": "₹4 Cr",
+  "postedDate": "2026-10-14",
+  "featured": false,
+  "localitySlug": "sector-82",
+  "furnishing": "unfurnished",
+  "propertyType": "plot",
+  "areaUnit": "sqyd",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Wide Approach Road",
     "Corner Plot",
     "Gated Colony"
   ],
-  "images": [
-    "/images/listings/residential-plot-sector-82/1.svg",
-    "/images/listings/residential-plot-sector-82/2.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-08-05",
   "specs": {
     "bedrooms": null,
     "bathrooms": null,
@@ -33,5 +24,17 @@
     "floor": null,
     "facing": "East",
     "age": null
-  }
+  },
+  "title": "Residential Plot in Sector 82",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.32.40-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.32.45-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.32.45-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.32.43-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.32.44-pm-1-.jpeg"
+  ],
+  "areaSqft": 2250,
+  "rentPeriod": null,
+  "description": "Clear-title residential plot (250 sq. yd.) in a licensed colony in Sector 82, New Gurugram, with wide approach road and all basic infrastructure in place.",
+  "purpose": "buy"
 }
