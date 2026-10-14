@@ -1,32 +1,21 @@
 {
-  "slug": "retail-shop-sector-57",
-  "title": "Retail Shop for Rent in Sector 57",
-  "purpose": "rent",
-  "propertyType": "commercial",
   "bhk": null,
+  "floorPlanImage": "",
   "price": 120000,
-  "priceLabel": "₹1,20,000/month",
-  "rentPeriod": "month",
-  "areaSqft": 900,
-  "areaUnit": "sqft",
-  "localitySlug": "sector-57",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "unfurnished",
-  "featured": false,
   "reraNumber": "",
-  "description": "Ground-floor retail shop with high street frontage in Sector 57, suitable for F&B, retail, or showroom use. High footfall location along Golf Course Extension Road.",
+  "slug": "4-bhk-independent-builder-floor-for-rent",
+  "priceLabel": "₹1,20,000/month",
+  "postedDate": "2026-09-12",
+  "featured": false,
+  "localitySlug": "Palam-vihar-gurgaon",
+  "furnishing": "semi-furnished",
+  "propertyType": "independent-house",
+  "areaUnit": "sqyd",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "High Street Frontage",
-    "Reserved Parking",
-    "Power Backup"
+    "Reserved Parking"
   ],
-  "images": [
-    "/images/listings/retail-shop-sector-57/1.svg",
-    "/images/listings/retail-shop-sector-57/2.svg",
-    "/images/listings/retail-shop-sector-57/3.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-09-12",
   "specs": {
     "bedrooms": null,
     "bathrooms": 1,
@@ -34,5 +23,16 @@
     "floor": "Ground",
     "facing": "East",
     "age": "2 years"
-  }
+  },
+  "title": "4 BHK Independent/Builder Floor for Rent",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.36.00-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.36.01-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.36.05-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-10.36.01-pm-1-.jpeg"
+  ],
+  "areaSqft": 518,
+  "rentPeriod": "month",
+  "description": "This builder floor for rent in block j pocket c palam vihar, gurgaon is now available at a monthly rent of 120000. Electricity & water charges to be paid to respective authorities on time. This builder floor will be available from tue, 13 oct 2026, for single women and family only. This semi-Furnished floor comes with 4 bathrooms & 2 balconies. The floor is spread over super built up area of 360 sq.Yards. Pooja room and study room space available separately. Parking will not be a problem as the builder has provided 2 covered parking and 2 open parking for each floor. This builder floor is on the 3rd floor. This property has basic facilities such as vaastu compliant, high ceiling height, false ceiling lighting and recently renovated. Other highlights are in a gated society. This property faces north-West direction. Flooring done in the premises is high quality marble.",
+  "purpose": "rent"
 }
