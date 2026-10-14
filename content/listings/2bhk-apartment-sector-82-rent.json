@@ -1,28 +1,23 @@
 {
-  "slug": "2bhk-apartment-sector-82-rent",
-  "title": "2 BHK Apartment for Rent in Sector 82",
-  "purpose": "rent",
-  "propertyType": "apartment",
   "bhk": 2,
+  "floorPlanImage": "",
   "price": 24000,
-  "priceLabel": "₹24,000/month",
-  "rentPeriod": "month",
-  "areaSqft": 1100,
-  "areaUnit": "sqft",
-  "localitySlug": "sector-82",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "semi-furnished",
-  "featured": false,
   "reraNumber": "",
-  "description": "Semi-furnished 2 BHK in a gated society in Sector 82, New Gurugram, with a children's play area and landscaped common areas.",
+  "slug": "2bhk-apartment-sector-82-rent",
+  "priceLabel": "₹24,000/month",
+  "postedDate": "2026-09-13",
+  "featured": false,
+  "localitySlug": "sector-82",
+  "furnishing": "semi-furnished",
+  "propertyType": "apartment",
+  "areaUnit": "sqft",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Lift",
     "24x7 Security",
     "Children's Play Area",
     "Covered Parking"
   ],
-  "floorPlanImage": "",
-  "postedDate": "2026-09-13",
   "specs": {
     "bedrooms": 2,
     "bathrooms": 2,
@@ -31,11 +26,16 @@
     "facing": "East",
     "age": "3 years"
   },
+  "title": "2 BHK Apartment for Rent in Sector 82",
   "images": [
-    "/images/listings/2bhk-apartment-sector-82-rent/1.svg",
-    "/images/listings/2bhk-apartment-sector-82-rent/2.svg",
-    "/images/listings/2bhk-apartment-sector-82-rent/3.svg",
-    "/images/listings/2bhk-apartment-sector-82-rent/4.svg",
-    "/images/listings/2bhk-apartment-sector-82-rent/5.svg"
-  ]
+    "/images/uploads/whatsapp-image-2026-09-18-at-12.51.53-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-18-at-12.51.55-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-18-at-12.51.53-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-09-18-at-12.51.53-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-09-at-3.20.22-pm.jpeg"
+  ],
+  "areaSqft": 1100,
+  "rentPeriod": "month",
+  "description": "Semi-furnished 2 BHK in a gated society in Sector 82, New Gurugram, with a children's play area and landscaped common areas.",
+  "purpose": "rent"
 }
