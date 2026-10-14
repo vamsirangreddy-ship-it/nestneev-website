@@ -1,20 +1,17 @@
 {
-  "slug": "4bhk-villa-sushant-lok",
-  "title": "4 BHK Independent Villa in Sushant Lok",
-  "purpose": "buy",
-  "propertyType": "villa",
   "bhk": 4,
+  "floorPlanImage": "",
   "price": 65000000,
-  "priceLabel": "₹6.5 Cr",
-  "rentPeriod": null,
-  "areaSqft": 3800,
-  "areaUnit": "sqft",
-  "localitySlug": "sushant-lok",
-  "possessionStatus": "ready-to-move",
-  "furnishing": "unfurnished",
-  "featured": true,
   "reraNumber": "",
-  "description": "Spacious 4 BHK independent villa on a corner plot in Sushant Lok Phase 1, with a private garden, terrace, and dedicated staff quarters. Ideal for large families seeking a central location.",
+  "slug": "4bhk-villa-sushant-lok",
+  "priceLabel": "₹6.5 Cr",
+  "postedDate": "2026-08-15",
+  "featured": true,
+  "localitySlug": "sushant-lok",
+  "furnishing": "unfurnished",
+  "propertyType": "villa",
+  "areaUnit": "sqft",
+  "possessionStatus": "ready-to-move",
   "amenities": [
     "Private Garden",
     "Terrace",
@@ -23,15 +20,6 @@
     "Modular Kitchen",
     "Power Backup"
   ],
-  "images": [
-    "/images/listings/4bhk-villa-sushant-lok/1.svg",
-    "/images/listings/4bhk-villa-sushant-lok/2.svg",
-    "/images/listings/4bhk-villa-sushant-lok/3.svg",
-    "/images/listings/4bhk-villa-sushant-lok/4.svg",
-    "/images/listings/4bhk-villa-sushant-lok/5.svg"
-  ],
-  "floorPlanImage": "",
-  "postedDate": "2026-08-15",
   "specs": {
     "bedrooms": 4,
     "bathrooms": 5,
@@ -39,5 +27,17 @@
     "floor": "G+2",
     "facing": "North",
     "age": "5 years"
-  }
+  },
+  "title": "4 BHK Independent Villa in Sushant Lok",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-10-14-at-11.40.41-am-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-11.40.41-am.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-11.40.44-am-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-11.40.43-am.jpeg",
+    "/images/uploads/whatsapp-image-2026-10-14-at-11.40.41-am-1-.jpeg"
+  ],
+  "areaSqft": 3800,
+  "rentPeriod": null,
+  "description": "Spacious 4 BHK independent villa on a corner plot in Sushant Lok Phase 1, with a private garden, terrace, and dedicated staff quarters. Ideal for large families seeking a central location.",
+  "purpose": "buy"
 }
