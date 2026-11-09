@@ -1,0 +1,39 @@
+{
+  "bhk": "",
+  "price": 39900000,
+  "slug": "4-bhk-builder-floor-in-palam-vihar-gurgaon",
+  "priceLabel": "3.99 CR",
+  "postedDate": "2026-11-09",
+  "featured": false,
+  "localitySlug": "Palam-vihar-gurgaon",
+  "furnishing": "semi-furnished",
+  "propertyType": "independent-house",
+  "areaUnit": "sqyd",
+  "possessionStatus": "ready-to-move",
+  "amenities": [
+    "Market",
+    "Expressway",
+    "Metro",
+    "Hospital"
+  ],
+  "specs": {
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "balconies": 2,
+    "floor": "2",
+    "facing": "East",
+    "age": "New"
+  },
+  "title": "4 BHK Builder Floor in Palam Vihar, Gurgaon",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-11-09-at-11.28.49-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-11.29.26-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-11.29.24-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-11.29.23-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-11.29.25-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-11.29.27-pm.jpeg"
+  ],
+  "areaSqft": 360,
+  "description": "Experience luxury living with this premium 4 BHK builder floor in Palam Vihar, Gurgaon. Featuring spacious bedrooms, modern interiors, elegant fittings, ample parking and a prime residential location, this property is ideal for families seeking comfort, privacy and convenience.",
+  "purpose": "buy"
+}
