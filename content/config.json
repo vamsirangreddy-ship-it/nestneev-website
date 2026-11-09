@@ -1,4 +1,5 @@
 {
+  "heroVideo": "/images/uploads/chandigarh-farm-house.jpg",
   "domain": "https://www.nestneev.com",
   "city": "Gurgaon",
   "social": {
@@ -10,6 +11,11 @@
   "tagline": "\"Strong foundations. Trusted guidance.\"",
   "state": "Haryana",
   "siteName": "Nestneev",
+  "heroImages": [
+    "/images/uploads/commercial-3-.webp",
+    "/images/uploads/commercial-2-.webp",
+    "/images/uploads/gurgaon.jpg"
+  ],
   "phoneDisplay": "+91 9211859592",
   "address": {
     "line1": "C72, Palam Vihar Kendra, Palam Vihar",
