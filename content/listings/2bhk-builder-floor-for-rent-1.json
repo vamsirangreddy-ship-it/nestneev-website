@@ -1,0 +1,36 @@
+{
+  "bhk": 2,
+  "price": 35000,
+  "slug": "2bhk-builder-floor-for-rent",
+  "priceLabel": "35k",
+  "postedDate": "2026-11-10",
+  "featured": false,
+  "localitySlug": "Palam-vihar-gurgaon",
+  "furnishing": "semi-furnished",
+  "propertyType": "independent-house",
+  "areaUnit": "sqyd",
+  "possessionStatus": "ready-to-move",
+  "specs": {
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "balconies": 2,
+    "floor": "2",
+    "facing": "West",
+    "age": ""
+  },
+  "title": "2BHK Builder Floor For Rent",
+  "images": [
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.03-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.04-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.04-pm-2-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.03-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.07-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.04-pm.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.09-pm-1-.jpeg",
+    "/images/uploads/whatsapp-image-2026-11-09-at-3.49.12-pm-2-.jpeg"
+  ],
+  "areaSqft": 173,
+  "rentPeriod": "month",
+  "description": "# 2 BHK Builder Floor for Rent in Gurgaon\n\nDiscover comfortable and modern living with this beautifully designed 2 BHK Builder Floor available for rent in Gurgaon. The property features spacious bedrooms, a well-designed living and dining area, a modular kitchen, modern bathrooms, and excellent ventilation.\n\nLocated in a prime residential locality, the property offers convenient access to markets, schools, hospitals, shopping centres, public transport, and major roads.\n\n**Property Highlights:**\n- 2 Spacious Bedrooms\n- Well-designed Living & Dining Area\n- Modular Kitchen\n- Modern Bathrooms\n- Ample Natural Light & Ventilation\n- Dedicated Parking (if available)\n- Peaceful Residential Location\n- Easy Connectivity to Major Locations\n\n**Ideal For:** Families and working professionals.",
+  "purpose": "rent"
+}
