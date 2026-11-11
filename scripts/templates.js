@@ -1,3 +1,5 @@
+const TR = require("./tracking");
+
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/buy/", label: "Buy" },
@@ -156,12 +158,15 @@ function layout({ config, title, description, path, bodyClass, content, jsonLd, 
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/styles.css">
 ${ld}
+${TR.headHtml(config.tracking)}
 </head>
 <body class="${bodyClass || ""}">
+${TR.bodyHtml(config.tracking)}
 ${siteHeader(config, path)}
 ${content}
 ${siteFooter(config)}
 <script src="/js/main.js" defer></script>
+${TR.eventScript(config.tracking)}
 </body>
 </html>`;
 }

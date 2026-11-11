@@ -30,11 +30,29 @@ function loadJSONDir(dir) {
 }
 
 const config = JSON.parse(fs.readFileSync(path.join(CONTENT, "config.json"), "utf8"));
+// Analytics/ads IDs, editable in the CMS (Site Settings -> Tracking & Analytics).
+{
+  const trackingFile = path.join(CONTENT, "tracking.json");
+  const raw = fs.existsSync(trackingFile) ? JSON.parse(fs.readFileSync(trackingFile, "utf8")) : {};
+  const { tracking, warnings } = require("./tracking").clean(raw);
+  warnings.forEach((w) => console.warn("WARNING: " + w));
+  config.tracking = tracking;
+}
 const listings = loadJSONDir(path.join(CONTENT, "listings")).sort((a, b) => new Date(b.postedDate) - new Date(a.postedDate));
 // Safety net: if a photo file was deleted in the CMS media library but a
 // listing still points at it, drop the reference (and warn) instead of
 // shipping a broken image on the homepage / listing cards.
 for (const l of listings) {
+  // Optional fields: a listing saved in the CMS with an empty list/section
+  // simply omits that key, which used to crash the whole build.
+  l.amenities = Array.isArray(l.amenities)
+    ? l.amenities.map((x) => String(x == null ? "" : x).trim()).filter(Boolean)
+    : typeof l.amenities === "string"
+    ? l.amenities.split(/\r?\n|,/).map((x) => x.trim()).filter(Boolean)
+    : [];
+  l.specs = l.specs && typeof l.specs === "object" ? l.specs : {};
+  l.furnishing = typeof l.furnishing === "string" ? l.furnishing : "";
+  l.description = typeof l.description === "string" ? l.description : "";
   l.images = T.imageList(l.images).filter((src) => {
     if (/^https?:/i.test(src) || /^data:/i.test(src)) return true;
     if (fs.existsSync(path.join(PUBLIC, src))) return true;
@@ -543,10 +561,14 @@ function buildPropertyPages() {
               ${specsRows.map(([k, v]) => `<tr><td>${k}</td><td>${T.escapeHtml(v)}</td></tr>`).join("")}
             </table>
 
-            <h2>Amenities</h2>
+            ${
+              listing.amenities.length
+                ? `<h2>Amenities</h2>
             <ul class="amenities-list">
               ${listing.amenities.map((a) => `<li>${T.escapeHtml(a)}</li>`).join("")}
-            </ul>
+            </ul>`
+                : ""
+            }
 
             ${
               listing.floorPlanImage

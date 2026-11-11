@@ -67,7 +67,7 @@ collections:
       - { label: "Show in Featured carousel on Homepage", name: "featured", widget: "boolean", default: false }
       - { label: "RERA Registration Number (leave blank if not applicable)", name: "reraNumber", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Amenities", name: "amenities", widget: "list", hint: "Add one amenity per line" }
+      - { label: "Amenities", name: "amenities", widget: "list", required: false, hint: "Add one amenity per line (optional)" }
       # Photos are a list so every photo is its own entry. Saves a FLAT list of paths,
       # e.g. ["/images/uploads/a.jpg", ...]. (Decap's built-in media library can only
       # pick ONE image per field, so a plain multi-select image field does not work.
@@ -184,3 +184,18 @@ collections:
               - { label: "Years in Gurugram", name: "yearsInGurugram", widget: "string" }
           - { label: "Netlify Forms Enabled", name: "netlifyFormsEnabled", widget: "boolean", default: true }
           - { label: "Google Maps Embed URL (default, used on Contact page)", name: "googleMapsEmbedDefault", widget: "string" }
+      - name: "tracking"
+        label: "Tracking & Analytics"
+        file: "content/tracking.json"
+        fields:
+          - { label: "Google Tag Manager ID", name: "gtmId", widget: "string", required: false, hint: "Looks like GTM-ABC1234. Tip: if you manage Google Analytics / Facebook Pixel INSIDE Tag Manager, leave those boxes below empty so visits are not counted twice." }
+          - { label: "Google Analytics 4 Measurement ID", name: "ga4Id", widget: "string", required: false, hint: "Looks like G-ABCDE12345 (Analytics -> Admin -> Data streams -> your website)." }
+          - { label: "Facebook (Meta) Pixel ID", name: "metaPixelId", widget: "string", required: false, hint: "Numbers only, e.g. 123456789012345 (Meta Events Manager -> Data sources)." }
+          - { label: "Google Ads ID", name: "googleAdsId", widget: "string", required: false, hint: "Looks like AW-123456789 (Google Ads -> Goals -> Conversions)." }
+          - { label: "Google Ads conversion label - Enquiry form sent", name: "googleAdsLeadLabel", widget: "string", required: false, hint: "The part after the slash in the conversion tag: AW-123456789/THIS_PART" }
+          - { label: "Google Ads conversion label - Call button tapped", name: "googleAdsCallLabel", widget: "string", required: false }
+          - { label: "Google Ads conversion label - WhatsApp button tapped", name: "googleAdsWhatsappLabel", widget: "string", required: false }
+          - { label: "Google Search Console verification", name: "searchConsoleVerification", widget: "string", required: false, hint: "Paste the code OR the whole meta tag Google gives you (HTML tag method)." }
+          - { label: "Facebook domain verification", name: "facebookDomainVerification", widget: "string", required: false, hint: "Paste the code OR the whole meta tag from Meta Business Settings -> Brand safety -> Domains." }
+          - { label: "Track enquiries, Call taps and WhatsApp taps as conversions", name: "eventTracking", widget: "boolean", default: true }
+          - { label: "Other tracking code (advanced)", name: "customHeadCode", widget: "text", required: false, hint: "Optional. Any extra script/meta tag (e.g. Microsoft Clarity, Hotjar). Added to every page head exactly as pasted - only paste code from a source you trust." }
