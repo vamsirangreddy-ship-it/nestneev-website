@@ -38,9 +38,46 @@ export default {
       return handleEnquiry(request, env);
     }
 
+    // Optional: serve /blog from a WordPress install (set BLOG_ORIGIN in
+    // wrangler.toml, e.g. "https://blog-origin.example.com"). WordPress must
+    // be installed in that host's /blog folder with both its WordPress
+    // Address and Site Address set to https://nestneev.com/blog. Until
+    // BLOG_ORIGIN is set, /blog keeps serving the built-in static blog.
+    if (env.BLOG_ORIGIN && (url.pathname === "/blog" || url.pathname.startsWith("/blog/"))) {
+      return proxyBlog(request, env, url);
+    }
+
     return env.ASSETS.fetch(request);
   },
 };
+
+async function proxyBlog(request, env, url) {
+  let origin;
+  try {
+    origin = new URL(env.BLOG_ORIGIN);
+  } catch (e) {
+    return env.ASSETS.fetch(request); // bad config: fall back to the static blog
+  }
+  const target = origin.origin + url.pathname + url.search;
+  const headers = new Headers(request.headers);
+  headers.delete("host");
+  headers.set("X-Forwarded-Host", url.host);
+  headers.set("X-Forwarded-Proto", "https");
+  const init = { method: request.method, headers, redirect: "manual" };
+  if (request.method !== "GET" && request.method !== "HEAD") init.body = request.body;
+
+  let res;
+  try {
+    res = await fetch(target, init);
+  } catch (e) {
+    console.error("Blog origin unreachable:", e && e.message ? e.message : e);
+    return env.ASSETS.fetch(request); // WordPress down: show the static blog instead of an error
+  }
+  const out = new Response(res.body, res);
+  const loc = out.headers.get("Location");
+  if (loc && loc.startsWith(origin.origin)) out.headers.set("Location", url.origin + loc.slice(origin.origin.length));
+  return out;
+}
 
 async function handleEnquiry(request, env) {
   let form;

@@ -16,7 +16,7 @@ not_found_handling = "404-page"
 # POST) WITHOUT ever running worker.js, so the contact/sell forms died
 # with "HTTP ERROR 405". Forcing the worker to run first for /api/*
 # makes form posts reach handleEnquiry(); everything else is unchanged.
-run_worker_first = ["/api/*"]
+run_worker_first = ["/api/*", "/blog", "/blog/*"]
 
 [vars]
 # Not sensitive — just where enquiry emails get sent. The Resend API
@@ -26,3 +26,8 @@ CONTACT_PHONE_DISPLAY = "+91 9211859592"
 CONTACT_WHATSAPP = "919211859592"
 # Optional, after verifying nestneev.com in Resend:
 # CONTACT_FROM_EMAIL = "NestNeev <hello@nestneev.com>"
+
+# WordPress blog: uncomment and set once WordPress is installed in the /blog
+# folder on its host (see wordpress-migration/README.txt). Then /blog/* on
+# nestneev.com is served from WordPress; the old static blog stays as backup.
+# BLOG_ORIGIN = "https://YOUR-HOSTINGER-DOMAIN"
