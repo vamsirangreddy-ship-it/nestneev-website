@@ -158,7 +158,8 @@ async function sendViaResend(env, { subject, text, html, attachments, replyTo })
   try {
     const payload = {
       from: env.CONTACT_FROM_EMAIL || DEFAULT_FROM,
-      to: [env.CONTACT_TO_EMAIL || "hello@nestneev.com"],
+      // CONTACT_TO_EMAIL may hold several addresses separated by commas.
+      to: String(env.CONTACT_TO_EMAIL || "hello@nestneev.com").split(",").map((x) => x.trim()).filter(Boolean),
       subject,
       text,
       html,
