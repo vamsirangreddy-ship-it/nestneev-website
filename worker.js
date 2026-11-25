@@ -31,7 +31,7 @@ const DEFAULT_FROM = "NestNeev Website <onboarding@resend.dev>"; // override wit
 const MAX_ATTACHMENT_BYTES = 30 * 1024 * 1024; // stay well under Resend's ~40MB request limit
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/enquiry" && request.method === "POST") {
@@ -44,21 +44,70 @@ export default {
     // Address and Site Address set to https://nestneev.com/blog. Until
     // BLOG_ORIGIN is set, /blog keeps serving the built-in static blog.
     if (env.BLOG_ORIGIN && (url.pathname === "/blog" || url.pathname.startsWith("/blog/"))) {
-      return proxyBlog(request, env, url);
+      return proxyBlog(request, env, url, ctx);
     }
 
     return env.ASSETS.fetch(request);
   },
 };
 
-async function proxyBlog(request, env, url) {
+// --- WordPress blog proxy -------------------------------------------------
+// Hostinger's CDN answers "429 Too Many Requests" when one address sends it
+// lots of requests, and every visitor reaches it from this Worker's shared
+// address. So we (1) keep short-lived copies of public blog pages and
+// long-lived copies of static files (CSS/JS/images) at Cloudflare, so
+// WordPress is only asked occasionally, and (2) if WordPress still refuses or
+// is down, serve the last good copy, or the old built-in static blog, rather
+// than an error page. Logged-in / admin / form traffic is never cached.
+const BLOG_STATIC_EXT = /\.(?:css|js|mjs|map|png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|eot|otf|mp4|webm|pdf)$/i;
+const BLOG_DYNAMIC_PATH = /^\/blog\/(?:wp-admin|wp-login\.php|wp-json|wp-cron\.php|xmlrpc\.php|wp-comments-post\.php)/i;
+const BLOG_HTML_TTL = 300; // seconds a public page is served from cache before asking WordPress again
+const BLOG_STATIC_TTL = 86400; // seconds static files are served from cache
+
+function blogWith(resp, name, value) {
+  const r = new Response(resp.body, resp);
+  r.headers.set(name, value);
+  return r;
+}
+
+async function proxyBlog(request, env, url, ctx) {
   let origin;
   try {
     origin = new URL(env.BLOG_ORIGIN);
   } catch (e) {
     return env.ASSETS.fetch(request); // bad config: fall back to the static blog
   }
-  const target = origin.origin + url.pathname + url.search;
+
+  const path = url.pathname;
+  const isGet = request.method === "GET";
+  const isStatic = isGet && BLOG_STATIC_EXT.test(path);
+  const loggedIn = /wordpress_logged_in|wordpress_sec|wp-postpass|comment_author/i.test(request.headers.get("Cookie") || "");
+  const isDynamic = BLOG_DYNAMIC_PATH.test(path);
+  // Public pages: GET, no query string (searches, previews, tracking params
+  // skip the cache), not logged in. Static files: cached regardless of login
+  // (they are identical for everyone), keyed with their ?ver= string.
+  const cacheable = isStatic ? !isDynamic || /\.(?:css|js|png|gif|svg|woff2?)$/i.test(path)
+    : isGet && !loggedIn && !isDynamic && url.search === "";
+  const ttl = isStatic ? BLOG_STATIC_TTL : BLOG_HTML_TTL;
+
+  let cache = null;
+  let cacheKey = null;
+  let cached = null;
+  if (cacheable) {
+    try {
+      cache = caches.default;
+      cacheKey = new Request(url.origin + path + (isStatic ? url.search : ""), { method: "GET" });
+      cached = await cache.match(cacheKey);
+    } catch (e) {
+      cache = null;
+    }
+    if (cached) {
+      const age = (Date.now() - Number(cached.headers.get("X-Blog-Cached-At") || 0)) / 1000;
+      if (age < ttl) return blogWith(cached, "X-Blog-Cache", "hit");
+    }
+  }
+
+  const target = origin.origin + path + url.search;
   const headers = new Headers(request.headers);
   headers.delete("host");
   headers.set("X-Forwarded-Host", url.host);
@@ -66,17 +115,35 @@ async function proxyBlog(request, env, url) {
   const init = { method: request.method, headers, redirect: "manual" };
   if (request.method !== "GET" && request.method !== "HEAD") init.body = request.body;
 
-  let res;
+  let res = null;
   try {
     res = await fetch(target, init);
   } catch (e) {
     console.error("Blog origin unreachable:", e && e.message ? e.message : e);
-    return env.ASSETS.fetch(request); // WordPress down: show the static blog instead of an error
   }
-  const out = new Response(res.body, res);
-  const loc = out.headers.get("Location");
-  if (loc && loc.startsWith(origin.origin)) out.headers.set("Location", url.origin + loc.slice(origin.origin.length));
-  return out;
+
+  if (res && res.status !== 429 && res.status < 500) {
+    const out = new Response(res.body, res);
+    const loc = out.headers.get("Location");
+    if (loc && loc.startsWith(origin.origin)) out.headers.set("Location", url.origin + loc.slice(origin.origin.length));
+    if (cache && res.status === 200 && !out.headers.has("Set-Cookie")) {
+      const copy = new Response(out.clone().body, out);
+      copy.headers.set("X-Blog-Cached-At", String(Date.now()));
+      copy.headers.set("Cache-Control", "public, max-age=604800"); // keep a week so a stale copy exists if WordPress goes down
+      ctx.waitUntil(cache.put(cacheKey, copy).catch((e) => console.error("Blog cache put failed:", e && e.message ? e.message : e)));
+    }
+    return out;
+  }
+
+  // WordPress refused (429), errored, or is unreachable.
+  console.error("Blog origin problem:", res ? res.status : "no response", path);
+  if (cached) return blogWith(cached, "X-Blog-Cache", "stale");
+  if (isGet && !isStatic && !isDynamic) {
+    // Show the old built-in blog (same addresses) instead of an error page.
+    return blogWith(await env.ASSETS.fetch(request), "X-Blog-Fallback", "static");
+  }
+  if (res) return res;
+  return new Response("Blog temporarily unavailable. Please try again in a minute.", { status: 503 });
 }
 
 async function handleEnquiry(request, env) {
